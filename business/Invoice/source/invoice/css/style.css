@@ -1,0 +1,570 @@
+* { margin: 0; padding: 0; }
+
+/************************************************************
+************    Base Runner's styles block    ***************
+*************************************************************/
+/*Begin search suggest style*/
+.ui-sortable-handle { 
+	overflow: hidden !important; 
+}
+.ui-sortable-placeholder { 
+    -moz-box-shadow: 0px 0px 0px #ffffff inset !important;
+    -webkit-box-shadow: 0px 0px 0px #ffffff inset !important;
+    box-shadow: 0px 0px 0px #ffffff inset !important;
+    border-bottom: 0px solid #ffffff;
+    border: 1px dashed #9ac9ca !important;
+    visibility: visible !important;
+    background: #f7fdfd !important; 
+}
+.ui-sortable-placeholder * { 
+    opacity: 0.0; visibility: visible !important; 
+}
+.search_suggest {
+	background-color: #FFFFFF;
+	border: 1px solid #000000;
+	color: black;
+	font-family: Verdana;
+	font-size: 8pt;
+	position: absolute;
+	text-align: left;
+	visibility: hidden;
+	width: 154pt;
+	overflow: hidden;
+	z-index: 101 !important;
+}
+.suggest_link {
+	background-color: #FFFFFF;
+	padding: 2pt 5pt;
+	cursor: pointer;
+}
+.suggest_link_over {
+	background-color: #FFE4A2;
+	color: Black;
+	padding: 2pt 5pt 2pt 5pt;
+	cursor: pointer;
+}
+/*End search suggest style*/
+
+/*Begin s508 style*/
+.rnr-s508{
+	width: 1pt;
+	height: 1pt;
+	display: block;
+	overflow: hidden;
+}
+/*End s508 style*/
+
+/*Begin calendar style*/
+.rnr-calTimeBox {
+	text-align: center;
+}
+.rnr-calTimeBox input {
+	margin: 10px 10px 0 10px;
+}
+.rnr-calTodayBut{
+	margin-top: 10px;
+}
+.rnr-calTodaySpan{
+	display: block; 
+	text-align: center;
+}
+.rnr-calMonthDD{
+	width: 90px;
+	margin: 0 5px;
+}
+.rnr-calYearDD{
+	margin-right: 5px;
+}
+/*End calendar style*/
+
+/*hidden styles for elements*/
+.rnr-hiddencontainer, 
+.rnr-hiddenbrick,
+.rnr-hiddenblock,
+.rnr-hiddenelem ,
+.rnr-button.rnr-button.rnr-button.rnr-hiddenelem,
+.rnr-hiddenfield,
+.rnr-hiddenrow, 
+.rnr-hidden-tab-panel {
+	display: none;
+}
+/*end of hidden styles*/
+
+/*Begin button style*/
+.rnr-button {
+	display: inline-block;
+	margin: 0 5px;
+	white-space: nowrap;
+}
+/*End button style*/
+
+ 
+/* Custom icons styles begin */
+@font-face {
+	font-family: 'runner-icons';
+	src:url('../../fonts/runner2.eot');
+	src:url('../../fonts/runner2.eot?#iefix') format('embedded-opentype'),
+		url('../../fonts/runner2woff.ttf') format('woff'),
+		url('../../fonts/runner2.ttf') format('truetype'),
+		url('../../fonts/runner2.svg#runner2') format('svg');
+	font-weight: normal;
+}
+
+[data-icon] {
+	text-decoration:none;
+}
+
+[data-icon]:before {
+	font-family: 'runner-icons';
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: inherit;
+	-webkit-font-smoothing: antialiased;
+	text-decoration: none;
+	font-size: 123%;
+}
+
+:hover > * > [data-icon=iecancel]:before {
+	opacity: 1;
+}
+
+[data-icon=iecancel]:before {
+	content: '!';
+	opacity: 0.6;
+	font-size:150%;
+}
+[data-icon=calendar]:before {
+	content: 'w';
+}
+[data-icon=remove]:before {
+	content: 't';
+	position: relative;
+	top: 1px;
+}
+.rnr-button.img[data-icon]:before,
+.saveEditing[data-icon]:before ,
+.revertEditing[data-icon]:before {
+	width: 1em;
+	height: 1em;
+	min-width: 1em;
+	min-height: 1em;
+	text-align: center;
+	vertical-align:text-bottom;
+	display: inline-block;
+}	
+
+.rnr-required-field:before {
+	color: #F00;
+}
+
+.rnr-row .rnr-cc2 {
+	text-align: center;
+}
+
+.rnr-bc {
+	text-align: center;
+}
+
+.rnr-icons img {
+	margin: 0px 3px;
+	vertical-align: middle;
+}
+
+*:not(:hover) .rnr-icons img {
+	opacity:0.3;
+	filter:alpha(opacity=30);
+}
+
+/*set opacity for inline add/edit icons*/
+.rnr-icons .inline-icons {
+	opacity:1;
+	filter:alpha(opacity=100);
+}
+.rnr-nowrap, .rnr-icons{
+	white-space: nowrap;
+}	
+.rnr-icons
+{
+	width: 100px;
+}
+.rnr-button-img,
+.rnr-verticalicons	
+{
+	text-decoration: none;
+}
+
+:hover > * > [data-icon=iecancel]:before
+{
+	opacity: 1;
+}
+/* Custom icons styles begin */
+
+/* visual editor styles begin */
+.showborders table > * > * > *
+{
+	border-left: solid #808080 1px !important;
+	border-top: solid #808080 1px !important;
+}
+
+.showborders table 
+{
+	border-right: solid #808080 1px !important;
+	border-bottom: solid #808080 1px !important;
+}
+
+.edit-control, .search-control, .filter-control, .view-control {
+display: inline-block; vertical-align: middle; border: #c0c0c0 1px solid; padding: 2px 2px 2px 2px; text-indent: 18px; line-height: 1; background-color: #FFFF99; 
+background-position: top left; 
+background-repeat:no-repeat;
+}
+
+.plugin-preview{
+vertical-align: middle; display: inline-block; border: #c0c0c0 1px solid; padding: 2px 2px 2px 2px;background-color: #FFFF99; background-position: top left; background-repeat:no-repeat;
+}
+
+.simple-xt-tag {
+display: inline-block; vertical-align: middle;text-align:center;border: #c0c0c0 1px solid; padding: 1px 3px; background-color: #FFFF99;font-family:Verdana;font-size:9pt;font-weight:normal;color:black;
+}
+
+.edit-control, .search-control
+{
+	padding: 3px;
+	border-radius: 1px;
+	border: 1px solid #c3c2c2;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+	background-position: 3px 1px; 
+}
+
+.rnr-control .edit-control
+{
+	padding: 5px;
+	border-radius: 3px;
+	background-position: 5px 3px; 
+}
+.function-login  .edit-control
+{
+	width: 200px;
+}
+/* visual editor styles end */
+/************************************************************
+************    Base Runner's styles block end  *************
+*************************************************************/
+
+
+table { border-collapse: collapse; }
+table.rnr-b-grid td, table.rnr-b-grid th { border-bottom: 1px solid black;}
+table.rnr-c-pdf td {border: none !important;}
+textarea { border: 0; font: 14px Georgia, Serif; overflow: hidden; resize: none; }
+input{ height: 25px; border: none; background-color: #FFFFFF; padding-right: 1px; font: 14px/1.4 Georgia, serif !important; }
+input:hover, textarea:hover, textarea:focus { background-color:#EEFF88; }
+div, textarea{ line-height: 17px; }
+
+#page-wrap { 
+	width: 850px; 
+	margin: 0 auto; 
+}
+
+#buttons-container{
+	padding-top: 7px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 30px;
+	border-bottom: 1px solid #999;
+	border-top: 1px solid #999;
+	z-index: 101;
+}
+
+#top-buttons{
+	width: 850px;
+	margin: 0 auto;
+}
+#top-buttons div {
+	display: inline-block;
+}
+#top-buttons .rnr-button {
+	margin: 0px 5px;
+}
+
+#top-pdf-link{
+	height: 38px;
+}
+
+#header, #header-view{ 
+/*	height: 15px; */
+	width: 100%; 
+	margin-top: 60px; 
+	background: #222; 
+	text-align: center; 
+	color: white; 
+	font: bold 15px Helvetica, Sans-Serif; 
+/*	text-decoration: uppercase; */
+	letter-spacing: 20px;
+	padding: 8px 0px; 
+}
+#header-view textarea{
+	height: 15px; 
+	width: 100%; 
+	background: #222; 
+	text-align: center; 
+	color: white; 
+	font: bold 15px Helvetica, Sans-Serif; 
+/*	text-decoration: uppercase; */
+	letter-spacing: 20px; 
+	padding: 0px 0px;
+	margin-bottom: 3px;
+}
+
+#company-name{
+	margin-top: 50px;
+	margin-bottom: 30px;
+	margin-left: 40px;
+	float:left;
+}
+
+#company-name textarea, #company-name {
+	font-size: 32px;
+	line-height: normal;
+}
+
+#subtotal, #tax input, #total{
+	text-align: right;
+}
+
+#tax input {
+	width: 40px;
+}
+
+/* customer styles begin*/
+#customer { 
+	overflow: hidden;
+	margin-left: 40px;	
+}
+#customer-title { 
+	font-size: 20px; 
+	font-weight: bold; 
+	float: left; 
+}
+#customer .buyer-addr{
+	margin-top: 4px;
+}
+/* customer styles end */
+
+#identity {
+	margin-top: 50px;
+	margin-bottom: 30px;
+	margin-right: 10px;
+	text-align: right;
+}
+
+#identity textarea {
+	text-align: right;
+}
+
+#txtr_buyer_info{
+	padding-top: 1px;
+}
+
+/*meta styles begin*/
+#meta{
+	margin-top: 1px;
+	margin-right: 10px;
+	float: right;
+}
+#meta td { text-align: right;}
+#meta td.meta-head {
+	text-align: left;
+	white-space: nowrap;
+}
+#meta td textarea { 
+	width: 100%; 
+	height: 20px; 
+	text-align: right; 
+}
+#meta td.invoice_number{
+	width: 110px;
+}
+#meta .invoice_number input, #meta .invoice_date_control  input {
+	width: 80px ;
+}
+#meta .invoice_number input {
+	float: right;
+	text-align: right;
+}
+#txtr_date{
+	padding-top:4px;
+}
+/*meta styles end*/
+
+/* Subtotals styles begin*/
+#totals{
+	margin-top: 30px;	
+	margin-bottom: 25px; 
+	float: right;
+	margin-right: 10px;
+}
+#totals td.meta-head { text-align: left;}
+
+#totals td.total-value{
+	width: 75px;
+	text-align: right;
+}
+#totals .hidden-subtotal,#totals .hidden-total {
+	display: none;
+}
+#totals .tax-value {
+	width: 40px;
+}
+/*Subtotals styles end*/ 
+
+#meta td, #totals td{
+	border: none;
+	height: 20px;
+}
+
+#terms { 
+	text-align: center; 
+	margin: 20px 0 20px 0; 
+}
+#terms h5 { 
+	text-transform: uppercase; 
+	font: 13px Helvetica, Sans-Serif; 
+	letter-spacing: 10px; 
+	border-bottom: 1px solid black; 
+	padding: 0 0 8px 0; 
+	margin: 0 0 8px 0; 
+}
+#terms textarea { 
+	width: 100%!important; 
+	text-align: center!important;
+}
+
+.price-length{/**/
+	display: none;
+}
+
+/*basic layout adjystment styles begin*/
+.rnr-center table {
+	margin-left: 0px;
+	width: 830px;
+}
+
+.rnr-b-grid th,.rnr-b-grid td{
+	padding-bottom: 2px;
+	padding-top: 2px;
+}
+
+.rnr-c-grid{
+	margin-bottom: 10px;
+	margin-left: 25px;
+}
+
+.rnr-s-grid {
+	padding-bottom: 10px;
+}
+
+.page-Invoiceitems_list .rnr-top,
+.page-Invoiceitems_list  .rnr-left,
+.page-Invoiceitems_list  .rnr-right,
+.page-Invoiceitems_list  .rnr-bottom  {
+	display: none;
+}
+
+.rnr-pagewrapper div, .rnr-pagewrapper textarea {
+	line-height: normal;
+}
+/*basic layout adjystment styles end*/
+
+/* Details container styles begin */
+.page-Invoiceitems_list {
+	padding-top: 10px;
+	padding-left: 10px;
+}
+
+[id^=inlineAdd] {
+	margin-top: 10px;
+	margin-left: 0px;
+}
+
+[id^='iEditLink']{
+	display: none;
+}
+
+[id^='saveLink']{
+	display: none !important;
+}
+
+/*.item-row td{
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+.rnr-toprow th {
+	padding-left: 2px;
+	padding-right: 2px;
+}*/ 
+
+/*td.total-cell span span span, td.pos-cell span span span{
+	display: block;
+	margin-top: 3px;
+}*/
+
+.price-cell, .quantity-cell, .total-cell {
+	width: 70px;
+	text-align: right;
+}
+ .total-cell,.quantity-cell {
+	width: 30px;
+ }
+.description-cell, .item-cell {
+	text-align: left;
+}
+.pos-cell{
+	text-align: center;
+	width: 36px;
+}
+.item-cell{
+	width: 544px;
+}
+
+ .quantity-cell, th.quantity-cell{
+	padding-right: 10px;
+ } 
+ 
+ .price-cell, th.price-cell{
+	padding-right: 10px;
+ }
+ 
+.price-cell input, .quantity-cell input {
+	width: 60px;
+	text-align: right;
+}
+
+.pos-cell input{
+	width: 24px;
+	text-align: center;
+	color: #000 !important;
+}
+
+.item-cell textarea{
+	padding-top: 5px;	
+}
+
+td.checkbox-cell{
+	display: none;
+}
+
+.listIcons-cell{
+	border: none !important;
+	width: 20px;
+}
+
+
+.bs-gridrow{
+	cursor: url(../../images/cursor_grab.png),auto ;
+}
+
+/* details container styles end */

@@ -1,0 +1,8 @@
+invcurrency
+invcustomers
+invitems
+invoicedetails
+invoices
+invsettings
+invstatus
+invusers

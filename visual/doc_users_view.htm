@@ -1,0 +1,687 @@
+<!doctype html>
+<html  {$html_attrs}>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      {$pagetitle}
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <base href="{$projectPath}">
+    <link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+    {BEGIN rtlCSS}
+      <link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+    {END rtlCSS}
+    {BEGIN styleCSSFiles}
+      <link REL="stylesheet" href="{$stylepath}" type="text/css">
+    {END styleCSSFiles}
+    <LINK href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" rel="stylesheet">
+    <STYLE type="text/css">
+      #div_signcontract{ width: 99%; }
+      .popupHeader{ margin: 10px; }
+    </STYLE>
+    <SCRIPT src="http://code.jquery.com/jquery-1.9.1.min.js">
+    </SCRIPT>
+    <SCRIPT src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js">
+    </SCRIPT>
+    <SCRIPT src="assets/js/mysign.js">
+    </SCRIPT>
+    <META name="GENERATOR" content="MSHTML 11.00.10586.306">
+    <STYLE>
+      .savehidden1 {
+      display: none !important;
+      }
+    </STYLE>
+  </head>
+  <BODY class="{$stylename} function-view" {$bodyattrs}>
+    {BEGIN body}
+      {$header}
+      <style>
+        {$containerCss}
+      </style>
+      {$locking}
+      <DIV class="r-small-page" data-body-align="center" data-body-width="standard">
+        {BEGIN top_block}
+          <DIV class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}" data-v-width="4" data-v-margin="0">
+            <DIV class="row">
+              <DIV data-cellId="top_c1" data-pageid="{$pageid}" {$cell_top_c1} class="r-ori-vert col-md-12">
+                <h2 data-itemtype="view_header" data-itemid="view_header" {$item_view_header} data-pageid="{$pageid}" >
+                  {$pagetitlelabel doc_users view}
+                </h2>
+              </div>
+            </div>
+          </div>
+        {END top_block}
+        {BEGIN above-grid_block}
+          <DIV class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}" data-v-width="4" data-v-margin="0">
+          </div>
+        {END above-grid_block}
+        {BEGIN grid_block}
+          <TABLE data-body-align="center" data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" class="r-edit-form" cellpadding="0" cellspacing="0" {$grid_hiddenattr} data-form-width="2" data-v-width="4">
+            <tbody>
+              <tr {$row_grid_0} >
+                {BEGIN cellblock_grid_c3}
+                  <TD {$cell_grid_c3} class="r-ori-vert" data-cellId="grid_c3" data-pageid="{$pageid}" data-v-cell="2">
+                    <DIV edit-form-cell class="clearfix">
+                      {BEGIN id_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_id} r-vertical-field" data-fieldname="id" data-signal-error-for="id{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="id" data-fieldname="id">
+                          <DIV class="col-md-12">
+                            <LABEL class for="{$labelfor_id}">
+                              {BEGIN id_label}
+                                {$label doc_users id}
+                              {END id_label}
+                            </label>
+                            <DIV class>
+                              {$id_value}
+                            </div>
+                          </div>
+                        </div>
+                      {END id_fieldblock}
+                      {BEGIN full_name_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_full_name} r-vertical-field" data-fieldname="full_name" data-signal-error-for="full_name{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field8" {$item_integrated_edit_field8} data-pageid="{$pageid}" data-field="full_name" data-fieldname="full_name">
+                          <DIV class="col-md-12">
+                            <LABEL class for="{$labelfor_full_name}">
+                              {BEGIN full_name_label}
+                                {$label doc_users full_name}
+                              {END full_name_label}
+                            </label>
+                            <DIV class>
+                              {$full_name_value}
+                            </div>
+                          </div>
+                        </div>
+                      {END full_name_fieldblock}
+                      {BEGIN name_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_name} r-vertical-field" data-fieldname="name" data-signal-error-for="name{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="name" data-fieldname="name">
+                          <DIV class="col-md-12">
+                            <LABEL class for="{$labelfor_name}">
+                              {BEGIN name_label}
+                                {$label doc_users name}
+                              {END name_label}
+                            </label>
+                            <DIV class>
+                              {$name_value}
+                            </div>
+                          </div>
+                        </div>
+                      {END name_fieldblock}
+                      {BEGIN cea_reg_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_cea_reg} r-vertical-field" data-fieldname="cea_reg" data-signal-error-for="cea_reg{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="cea_reg" data-fieldname="cea_reg">
+                          <DIV class="col-md-12">
+                            <LABEL class for="{$labelfor_cea_reg}">
+                              {BEGIN cea_reg_label}
+                                {$label doc_users cea_reg}
+                              {END cea_reg_label}
+                            </label>
+                            <DIV class>
+                              {$cea_reg_value}
+                            </div>
+                          </div>
+                        </div>
+                      {END cea_reg_fieldblock}
+                      {BEGIN mobile_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_mobile} r-vertical-field" data-fieldname="mobile" data-signal-error-for="mobile{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="mobile" data-fieldname="mobile">
+                          <DIV class="col-md-12">
+                            <LABEL class for="{$labelfor_mobile}">
+                              {BEGIN mobile_label}
+                                {$label doc_users mobile}
+                              {END mobile_label}
+                            </label>
+                            <DIV class>
+                              {$mobile_value}
+                            </div>
+                          </div>
+                        </div>
+                      {END mobile_fieldblock}
+                      {BEGIN email_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_email} r-vertical-field" data-fieldname="email" data-signal-error-for="email{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="email" data-fieldname="email">
+                          <DIV class="col-md-12">
+                            <LABEL class for="{$labelfor_email}">
+                              {BEGIN email_label}
+                                {$label doc_users email}
+                              {END email_label}
+                            </label>
+                            <DIV class>
+                              {$email_value}
+                            </div>
+                          </div>
+                        </div>
+                      {END email_fieldblock}
+                      {BEGIN nric_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_nric} r-vertical-field" data-fieldname="nric" data-signal-error-for="nric{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field9" {$item_integrated_edit_field9} data-pageid="{$pageid}" data-field="nric" data-fieldname="nric">
+                          <DIV class="col-md-12">
+                            <LABEL class for="{$labelfor_nric}">
+                              {BEGIN nric_label}
+                                {$label doc_users nric}
+                              {END nric_label}
+                            </label>
+                            <DIV class>
+                              {$nric_value}
+                            </div>
+                          </div>
+                        </div>
+                      {END nric_fieldblock}
+                      {BEGIN usertype_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_usertype} r-vertical-field" data-fieldname="usertype" data-signal-error-for="usertype{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="usertype" data-fieldname="usertype">
+                          <DIV class="col-md-12">
+                            <LABEL class for="{$labelfor_usertype}">
+                              {BEGIN usertype_label}
+                                {$label doc_users usertype}
+                              {END usertype_label}
+                            </label>
+                            <DIV class>
+                              {$usertype_value}
+                            </div>
+                          </div>
+                        </div>
+                      {END usertype_fieldblock}
+                      {BEGIN home_address_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_home_address} r-vertical-field" data-fieldname="home_address" data-signal-error-for="home_address{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field10" {$item_integrated_edit_field10} data-pageid="{$pageid}" data-field="home_address" data-fieldname="home_address">
+                          <DIV class="col-md-12">
+                            <LABEL class for="{$labelfor_home_address}">
+                              {BEGIN home_address_label}
+                                {$label doc_users home_address}
+                              {END home_address_label}
+                            </label>
+                            <DIV class>
+                              {$home_address_value}
+                            </div>
+                          </div>
+                        </div>
+                      {END home_address_fieldblock}
+                      {BEGIN home_phone_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_home_phone} r-vertical-field" data-fieldname="home_phone" data-signal-error-for="home_phone{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field12" {$item_integrated_edit_field12} data-pageid="{$pageid}" data-field="home_phone" data-fieldname="home_phone">
+                          <DIV class="col-md-12">
+                            <LABEL class for="{$labelfor_home_phone}">
+                              {BEGIN home_phone_label}
+                                {$label doc_users home_phone}
+                              {END home_phone_label}
+                            </label>
+                            <DIV class>
+                              {$home_phone_value}
+                            </div>
+                          </div>
+                        </div>
+                      {END home_phone_fieldblock}
+                      {BEGIN yearin_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_yearin} r-vertical-field" data-fieldname="yearin" data-signal-error-for="yearin{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field15" {$item_integrated_edit_field15} data-pageid="{$pageid}" data-field="yearin" data-fieldname="yearin">
+                          <DIV class="col-md-12">
+                            <LABEL class for="{$labelfor_yearin}">
+                              {BEGIN yearin_label}
+                                {$label doc_users yearin}
+                              {END yearin_label}
+                            </label>
+                            <DIV class>
+                              {$yearin_value}
+                            </div>
+                          </div>
+                        </div>
+                      {END yearin_fieldblock}
+                      {BEGIN designation_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_designation} r-vertical-field" data-fieldname="designation" data-signal-error-for="designation{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field24" {$item_integrated_edit_field24} data-pageid="{$pageid}" data-field="designation" data-fieldname="designation">
+                          <DIV class="col-md-12">
+                            <LABEL class for="{$labelfor_designation}">
+                              {BEGIN designation_label}
+                                {$label doc_users designation}
+                              {END designation_label}
+                            </label>
+                            <DIV class>
+                              {$designation_value}
+                            </div>
+                          </div>
+                        </div>
+                      {END designation_fieldblock}
+                      {BEGIN status_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_status} r-vertical-field" data-fieldname="status" data-signal-error-for="status{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field30" {$item_integrated_edit_field30} data-pageid="{$pageid}" data-field="status" data-fieldname="status">
+                          <DIV class="col-md-12">
+                            <LABEL class for="{$labelfor_status}">
+                              {BEGIN status_label}
+                                {$label doc_users status}
+                              {END status_label}
+                            </label>
+                            <DIV class>
+                              {$status_value}
+                            </div>
+                          </div>
+                        </div>
+                      {END status_fieldblock}
+                      {BEGIN bank_info_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_bank_info} r-vertical-field" data-fieldname="bank_info" data-signal-error-for="bank_info{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field31" {$item_integrated_edit_field31} data-pageid="{$pageid}" data-field="bank_info" data-fieldname="bank_info">
+                          <DIV class="col-md-12">
+                            <LABEL class for="{$labelfor_bank_info}">
+                              {BEGIN bank_info_label}
+                                {$label doc_users bank_info}
+                              {END bank_info_label}
+                            </label>
+                            <DIV class>
+                              {$bank_info_value}
+                            </div>
+                          </div>
+                        </div>
+                      {END bank_info_fieldblock}
+                      {BEGIN bank_ac_no_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_bank_ac_no} r-vertical-field" data-fieldname="bank_ac_no" data-signal-error-for="bank_ac_no{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field32" {$item_integrated_edit_field32} data-pageid="{$pageid}" data-field="bank_ac_no" data-fieldname="bank_ac_no">
+                          <DIV class="col-md-12">
+                            <LABEL class for="{$labelfor_bank_ac_no}">
+                              {BEGIN bank_ac_no_label}
+                                {$label doc_users bank_ac_no}
+                              {END bank_ac_no_label}
+                            </label>
+                            <DIV class>
+                              {$bank_ac_no_value}
+                            </div>
+                          </div>
+                        </div>
+                      {END bank_ac_no_fieldblock}
+                      {BEGIN downline_agent_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_downline_agent} r-vertical-field" data-fieldname="downline_agent" data-signal-error-for="downline_agent{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field34" {$item_integrated_edit_field34} data-pageid="{$pageid}" data-field="downline_agent" data-fieldname="downline_agent">
+                          <DIV class="col-md-12">
+                            <LABEL class for="{$labelfor_downline_agent}">
+                              {BEGIN downline_agent_label}
+                                {$label doc_users downline_agent}
+                              {END downline_agent_label}
+                            </label>
+                            <DIV class>
+                              {$downline_agent_value}
+                            </div>
+                          </div>
+                        </div>
+                      {END downline_agent_fieldblock}
+                      {BEGIN downline_agent_cea_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_downline_agent_cea} r-vertical-field" data-fieldname="downline_agent_cea" data-signal-error-for="downline_agent_cea{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field36" {$item_integrated_edit_field36} data-pageid="{$pageid}" data-field="downline_agent_cea" data-fieldname="downline_agent_cea">
+                          <DIV class="col-md-12">
+                            <LABEL class for="{$labelfor_downline_agent_cea}">
+                              {BEGIN downline_agent_cea_label}
+                                {$label doc_users downline_agent_cea}
+                              {END downline_agent_cea_label}
+                            </label>
+                            <DIV class>
+                              {$downline_agent_cea_value}
+                            </div>
+                          </div>
+                        </div>
+                      {END downline_agent_cea_fieldblock}
+                      {BEGIN salesperson_share_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_salesperson_share} r-vertical-field" data-fieldname="salesperson_share" data-signal-error-for="salesperson_share{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field38" {$item_integrated_edit_field38} data-pageid="{$pageid}" data-field="salesperson_share" data-fieldname="salesperson_share">
+                          <DIV class="col-md-12">
+                            <LABEL class for="{$labelfor_salesperson_share}">
+                              {BEGIN salesperson_share_label}
+                                {$label doc_users salesperson_share}
+                              {END salesperson_share_label}
+                            </label>
+                            <DIV class>
+                              {$salesperson_share_value}
+                            </div>
+                          </div>
+                        </div>
+                      {END salesperson_share_fieldblock}
+                  </td>
+                {END cellblock_grid_c3}
+                {BEGIN cellblock_grid_c}
+                  <TD {$cell_grid_c} class="r-ori-vert" data-cellId="grid_c" data-pageid="{$pageid}" data-v-cell="2">
+                    <DIV edit-form-cell class="clearfix">
+                      {BEGIN user_photo_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_user_photo} r-vertical-field" data-fieldname="user_photo" data-signal-error-for="user_photo{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field13" {$item_integrated_edit_field13} data-pageid="{$pageid}" data-field="user_photo" data-fieldname="user_photo">
+                          <DIV class="col-md-12">
+                            <LABEL class for="{$labelfor_user_photo}">
+                              {BEGIN user_photo_label}
+                                {$label doc_users user_photo}
+                              {END user_photo_label}
+                            </label>
+                            <DIV class>
+                              {$user_photo_value}
+                            </div>
+                          </div>
+                        </div>
+                      {END user_photo_fieldblock}
+                      {BEGIN active_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_active} r-vertical-field" data-fieldname="active" data-signal-error-for="active{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="active" data-fieldname="active">
+                          <DIV class="col-md-12">
+                            <LABEL class for="{$labelfor_active}">
+                              {BEGIN active_label}
+                                {$label doc_users active}
+                              {END active_label}
+                            </label>
+                            <DIV class>
+                              {$active_value}
+                            </div>
+                          </div>
+                        </div>
+                      {END active_fieldblock}
+                      {BEGIN dob_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_dob} r-vertical-field" data-fieldname="dob" data-signal-error-for="dob{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field14" {$item_integrated_edit_field14} data-pageid="{$pageid}" data-field="dob" data-fieldname="dob">
+                          <DIV class="col-md-12">
+                            <LABEL class for="{$labelfor_dob}">
+                              {BEGIN dob_label}
+                                {$label doc_users dob}
+                              {END dob_label}
+                            </label>
+                            <DIV class>
+                              {$dob_value}
+                            </div>
+                          </div>
+                        </div>
+                      {END dob_fieldblock}
+                      {BEGIN datejoined_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_datejoined} r-vertical-field" data-fieldname="datejoined" data-signal-error-for="datejoined{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field16" {$item_integrated_edit_field16} data-pageid="{$pageid}" data-field="datejoined" data-fieldname="datejoined">
+                          <DIV class="col-md-12">
+                            <LABEL class for="{$labelfor_datejoined}">
+                              {BEGIN datejoined_label}
+                                {$label doc_users datejoined}
+                              {END datejoined_label}
+                            </label>
+                            <DIV class>
+                              {$datejoined_value}
+                            </div>
+                          </div>
+                        </div>
+                      {END datejoined_fieldblock}
+                      {BEGIN agency_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_agency} r-vertical-field" data-fieldname="agency" data-signal-error-for="agency{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field18" {$item_integrated_edit_field18} data-pageid="{$pageid}" data-field="agency" data-fieldname="agency">
+                          <DIV class="col-md-12">
+                            <LABEL class for="{$labelfor_agency}">
+                              {BEGIN agency_label}
+                                {$label doc_users agency}
+                              {END agency_label}
+                            </label>
+                            <DIV class>
+                              {$agency_value}
+                            </div>
+                          </div>
+                        </div>
+                      {END agency_fieldblock}
+                      {BEGIN agency_address_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_agency_address} r-vertical-field" data-fieldname="agency_address" data-signal-error-for="agency_address{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field19" {$item_integrated_edit_field19} data-pageid="{$pageid}" data-field="agency_address" data-fieldname="agency_address">
+                          <DIV class="col-md-12">
+                            <LABEL class for="{$labelfor_agency_address}">
+                              {BEGIN agency_address_label}
+                                {$label doc_users agency_address}
+                              {END agency_address_label}
+                            </label>
+                            <DIV class>
+                              {$agency_address_value}
+                            </div>
+                          </div>
+                        </div>
+                      {END agency_address_fieldblock}
+                      {BEGIN agency_cea_reg_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_agency_cea_reg} r-vertical-field" data-fieldname="agency_cea_reg" data-signal-error-for="agency_cea_reg{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field22" {$item_integrated_edit_field22} data-pageid="{$pageid}" data-field="agency_cea_reg" data-fieldname="agency_cea_reg">
+                          <DIV class="col-md-12">
+                            <LABEL class for="{$labelfor_agency_cea_reg}">
+                              {BEGIN agency_cea_reg_label}
+                                {$label doc_users agency_cea_reg}
+                              {END agency_cea_reg_label}
+                            </label>
+                            <DIV class>
+                              {$agency_cea_reg_value}
+                            </div>
+                          </div>
+                        </div>
+                      {END agency_cea_reg_fieldblock}
+                      {BEGIN agency_tel_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_agency_tel} r-vertical-field" data-fieldname="agency_tel" data-signal-error-for="agency_tel{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field21" {$item_integrated_edit_field21} data-pageid="{$pageid}" data-field="agency_tel" data-fieldname="agency_tel">
+                          <DIV class="col-md-12">
+                            <LABEL class for="{$labelfor_agency_tel}">
+                              {BEGIN agency_tel_label}
+                                {$label doc_users agency_tel}
+                              {END agency_tel_label}
+                            </label>
+                            <DIV class>
+                              {$agency_tel_value}
+                            </div>
+                          </div>
+                        </div>
+                      {END agency_tel_fieldblock}
+                      {BEGIN agency_email_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_agency_email} r-vertical-field" data-fieldname="agency_email" data-signal-error-for="agency_email{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field25" {$item_integrated_edit_field25} data-pageid="{$pageid}" data-field="agency_email" data-fieldname="agency_email">
+                          <DIV class="col-md-12">
+                            <LABEL class for="{$labelfor_agency_email}">
+                              {BEGIN agency_email_label}
+                                {$label doc_users agency_email}
+                              {END agency_email_label}
+                            </label>
+                            <DIV class>
+                              {$agency_email_value}
+                            </div>
+                          </div>
+                        </div>
+                      {END agency_email_fieldblock}
+                      {BEGIN comm_structure_date_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_comm_structure_date} r-vertical-field" data-fieldname="comm_structure_date" data-signal-error-for="comm_structure_date{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field33" {$item_integrated_edit_field33} data-pageid="{$pageid}" data-field="comm_structure_date" data-fieldname="comm_structure_date">
+                          <DIV class="col-md-12">
+                            <LABEL class for="{$labelfor_comm_structure_date}">
+                              {BEGIN comm_structure_date_label}
+                                {$label doc_users comm_structure_date}
+                              {END comm_structure_date_label}
+                            </label>
+                            <DIV class>
+                              {$comm_structure_date_value}
+                            </div>
+                          </div>
+                        </div>
+                      {END comm_structure_date_fieldblock}
+                      {BEGIN downline_agent_date_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_downline_agent_date} r-vertical-field" data-fieldname="downline_agent_date" data-signal-error-for="downline_agent_date{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field35" {$item_integrated_edit_field35} data-pageid="{$pageid}" data-field="downline_agent_date" data-fieldname="downline_agent_date">
+                          <DIV class="col-md-12">
+                            <LABEL class for="{$labelfor_downline_agent_date}">
+                              {BEGIN downline_agent_date_label}
+                                {$label doc_users downline_agent_date}
+                              {END downline_agent_date_label}
+                            </label>
+                            <DIV class>
+                              {$downline_agent_date_value}
+                            </div>
+                          </div>
+                        </div>
+                      {END downline_agent_date_fieldblock}
+                      {BEGIN downline_agent_photo_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_downline_agent_photo} r-vertical-field" data-fieldname="downline_agent_photo" data-signal-error-for="downline_agent_photo{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field37" {$item_integrated_edit_field37} data-pageid="{$pageid}" data-field="downline_agent_photo" data-fieldname="downline_agent_photo">
+                          <DIV class="col-md-12">
+                            <LABEL class for="{$labelfor_downline_agent_photo}">
+                              {BEGIN downline_agent_photo_label}
+                                {$label doc_users downline_agent_photo}
+                              {END downline_agent_photo_label}
+                            </label>
+                            <DIV class>
+                              {$downline_agent_photo_value}
+                            </div>
+                          </div>
+                        </div>
+                      {END downline_agent_photo_fieldblock}
+                      {BEGIN cut_to_agency_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_cut_to_agency} r-vertical-field" data-fieldname="cut_to_agency" data-signal-error-for="cut_to_agency{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field39" {$item_integrated_edit_field39} data-pageid="{$pageid}" data-field="cut_to_agency" data-fieldname="cut_to_agency">
+                          <DIV class="col-md-12">
+                            <LABEL class for="{$labelfor_cut_to_agency}">
+                              {BEGIN cut_to_agency_label}
+                                {$label doc_users cut_to_agency}
+                              {END cut_to_agency_label}
+                            </label>
+                            <DIV class>
+                              {$cut_to_agency_value}
+                            </div>
+                          </div>
+                        </div>
+                      {END cut_to_agency_fieldblock}
+                      {BEGIN dateleft_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_dateleft} r-vertical-field" data-fieldname="dateleft" data-signal-error-for="dateleft{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field17" {$item_integrated_edit_field17} data-pageid="{$pageid}" data-field="dateleft" data-fieldname="dateleft">
+                          <DIV class="col-md-12">
+                            <LABEL class for="{$labelfor_dateleft}">
+                              {BEGIN dateleft_label}
+                                {$label doc_users dateleft}
+                              {END dateleft_label}
+                            </label>
+                            <DIV class>
+                              {$dateleft_value}
+                            </div>
+                          </div>
+                        </div>
+                      {END dateleft_fieldblock}
+                      {BEGIN password_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_password} r-vertical-field" data-fieldname="password" data-signal-error-for="password{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="password" data-fieldname="password">
+                          <DIV class="col-md-12">
+                            <LABEL class for="{$labelfor_password}">
+                              {BEGIN password_label}
+                                {$label doc_users password}
+                              {END password_label}
+                            </label>
+                            <DIV class>
+                              {$password_value}
+                            </div>
+                          </div>
+                        </div>
+                      {END password_fieldblock}
+                  </td>
+                {END cellblock_grid_c}
+              </tr>
+            </tbody>
+          </table>
+          {BEGIN details_qualifications_user}
+            <DIV data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" class="bs-details">
+              <DIV class="panel panel-info details-grid">
+                <DIV class="panel-heading">
+                  <H4 class="panel-title">
+                    {$caption qualifications_user}
+                    <span>
+                      {$detailslButtons_qualifications_user}
+                    </span>
+                  </h4>
+                </div>
+                <DIV class="panel-body">
+                  {$displayDetailTable_qualifications_user}
+                </div>
+              </div>
+            </div>
+          {END details_qualifications_user}
+          {BEGIN details_awards_user}
+            <DIV data-itemtype="details_preview" data-itemid="details_preview1" {$item_details_preview1} data-pageid="{$pageid}" class="bs-details">
+              <DIV class="panel panel-info details-grid">
+                <DIV class="panel-heading">
+                  <H4 class="panel-title">
+                    {$caption awards_user}
+                    <span>
+                      {$detailslButtons_awards_user}
+                    </span>
+                  </h4>
+                </div>
+                <DIV class="panel-body">
+                  {$displayDetailTable_awards_user}
+                </div>
+              </div>
+            </div>
+          {END details_awards_user}
+          <TABLE data-body-align="center" data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" class="r-edit-form" cellpadding="0" cellspacing="0" {$grid_hiddenattr} data-form-width="2" data-v-width="4">
+            <tbody>
+              <tr {$row_grid_2} >
+                {BEGIN cellblock_grid_c5}
+                  <TD {$cell_grid_c5} class="r-ori-vert" data-single data-cellId="grid_c5" data-pageid="{$pageid}" data-v-cell="2">
+                    <DIV edit-form-cell class="clearfix">
+                      {BEGIN signature_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_signature} r-vertical-field" data-fieldname="signature" data-signal-error-for="signature{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field11" {$item_integrated_edit_field11} data-pageid="{$pageid}" data-field="signature" data-fieldname="signature">
+                          <DIV class="col-md-12">
+                            <LABEL class for="{$labelfor_signature}">
+                              {BEGIN signature_label}
+                                {$label doc_users signature}
+                              {END signature_label}
+                            </label>
+                            <DIV id="dbsign17" class>
+                              {$signature_value}
+                            </div>
+                          </div>
+                        </div>
+                        <DIV id="signature17">
+                          <SPAN data-role="content">
+                            <A class="rnr-button" onclick="window.signID = 'signature17';" href="#divPopUpSignContract" data-rel="popup">
+                              Sign
+                            </A>
+                          </SPAN>
+                          <!----- End Seller1 Open SignPad Block (field: sign_seller17) ----->
+                          <!----- Begin Seller1 Save/Clear Buttons Block (field: sign_seller17) ----->
+                          <SPAN>
+                            <A class="rnr-button button savehidden" id="Save_sign17" href="#" typeid="ib">
+                              Save_sign17
+                            </A>
+                            <A class="rnr-button button clear" id="x_17" href="#" typeid="ib">
+                              x
+                            </A>
+                          </SPAN>
+                        </div>
+                      {END signature_fieldblock}
+                  </td>
+                {END cellblock_grid_c5}
+                {BEGIN cellblock_grid_c6}
+                  <TD {$cell_grid_c6} class="r-ori-vert" data-single data-cellId="grid_c6" data-pageid="{$pageid}" data-v-cell="2">
+                    <DIV edit-form-cell class="clearfix">
+                  </td>
+                {END cellblock_grid_c6}
+              </tr>
+            </tbody>
+          </table>
+        {END grid_block}
+        {BEGIN below-grid_block}
+          <DIV class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}" data-v-width="4" data-v-margin="0">
+            <DIV class="row">
+              <DIV data-cellId="below-grid_c1" data-pageid="{$pageid}" {$cell_below-grid_c1} class="col-md-6">
+                {BEGIN back_button}
+                  <span data-itemtype="view_back_list" data-itemid="view_back_list" {$item_view_back_list} data-pageid="{$pageid}" data-small data-button-item>
+                    <A type="button" title class="btn btn-default" {$backbutton_attrs}>
+                      Back to list
+                    </a>
+                  </span>
+                {END back_button}
+                {BEGIN close_button}
+                  <span data-itemtype="view_close" data-itemid="view_close" {$item_view_close} data-pageid="{$pageid}" data-small data-button-item>
+                    <A type="button" title class="btn btn-default" href="#" {$closebutton_attrs}>
+                      Close window
+                    </a>
+                  </span>
+                {END close_button}
+              </div>
+              <DIV data-cellId="below-grid_c2" data-pageid="{$pageid}" {$cell_below-grid_c2} class="r-align-right r-ori-vert col-md-6">
+                <span data-itemtype="hamburger" data-itemid="hamburger" {$item_hamburger} data-pageid="{$pageid}" data-small data-button-item>
+                  <SPAN class="dropdown dropup">
+                    <BUTTON type="button" title class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <SPAN class="glyphicon glyphicon-menu-hamburger">
+                      </span>
+                      <SPAN class="caret">
+                      </span>
+                    </button>
+                    <UL class="dropdown-menu">
+                      {BEGIN edit_page_button}
+                        <li data-itemtype="view_edit" data-itemid="view_edit" {$item_view_edit} data-pageid="{$pageid}" data-small >
+                          <a  href="doc_users_edit.php?{$editlink}" {$edit_page_button_attrs}  title="" >
+                            Edit
+                          </a>
+                        </li>
+                      {END edit_page_button}
+                    </ul>
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+        {END below-grid_block}
+      </div>
+      {$footer}
+    {END body}
+    <DIV id="divPopUpSignContract" data-role="popup">
+      <DIV data-role="header" data-theme="b">
+        <A class="ui-btn-right closePopup" data-role="button" data-rel="back" data-transition="slide">
+          Close&nbsp;
+        </A>
+        <P class="popupHeader">
+          Sign Pad
+        </P>
+      </DIV>
+      <DIV class="ui-content popUpHeight">
+        <DIV id="div_signcontract">
+          <CANVAS class="canvas" id="canvas">
+          Canvas is not supported&nbsp;</CANVAS>
+          <DIV>
+            <INPUT id="btnSubmitSign" onclick="fun_submit()" type="button" value="Submit Sign" data-theme="b" data-inline="true" data-mini="true">
+            <INPUT id="btnClearSign" onclick="init_Sign_Canvas()" type="button" value="Clear" data-theme="b" data-inline="true" data-mini="true">
+          </DIV>
+        </DIV>
+      </DIV>
+    </DIV>
+  </body>
+</html>

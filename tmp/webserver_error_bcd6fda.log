@@ -1,0 +1,13 @@
+[Sun Jun 20 09:31:45 2021] [notice] Apache/2.2.17 (Win32) PHP/5.3.6RC3-dev configured -- resuming normal operations
+[Sun Jun 20 09:31:45 2021] [notice] Server built: Oct 18 2010 19:45:39
+[Sun Jun 20 09:31:45 2021] [notice] Parent: Created child process 12148
+[Sun Jun 20 09:31:45 2021] [notice] Child 12148: Child process is running
+[Sun Jun 20 09:31:45 2021] [notice] Child 12148: Acquired the start mutex.
+[Sun Jun 20 09:31:45 2021] [notice] Child 12148: Starting 64 worker threads.
+[Sun Jun 20 09:31:45 2021] [notice] Child 12148: Starting thread to listen on port 8085.
+[Sun Jun 20 09:31:52 2021] [notice] Parent: Received shutdown signal -- Shutting down the server.
+[Sun Jun 20 09:31:52 2021] [notice] Child 12148: Exit event signaled. Child process is ending.
+[Sun Jun 20 09:31:53 2021] [notice] Child 12148: Released the start mutex
+[Sun Jun 20 09:31:54 2021] [notice] Child 12148: All worker threads have exited.
+[Sun Jun 20 09:31:54 2021] [notice] Child 12148: Child process is exiting
+[Sun Jun 20 09:31:55 2021] [notice] Parent: Child process exited successfully.

@@ -1,0 +1,2730 @@
+<!DOCTYPE html>
+<HTML {$html_attrs}>
+  <HEAD>
+    <META http-equiv="X-UA-Compatible" content="IE=Edge">
+    <TITLE>
+      {$pagetitle}
+    </TITLE>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <LINK href="styles/default.css" rel="stylesheet" type="text/css">
+    <LINK href="invoice/css/print.css" 
+rel="stylesheet" type="text/css" media="print">
+    {BEGIN rtlCSS}
+      <LINK href="styles/defaultRTL.css" rel="stylesheet" type="text/css">
+    {END rtlCSS}
+    {BEGIN styleCSSFiles}
+      <LINK href="{$stylepath}" rel="stylesheet" type="text/css">
+    {END styleCSSFiles}
+    {BEGIN pageCSSFiles}
+      <LINK href="{$pagestylepath}" rel="stylesheet" type="text/css">
+    {END pageCSSFiles}
+    <LINK href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" 
+rel="stylesheet">
+    <STYLE type="text/css">
+      #div_signcontract{ width: 99%; }
+      .popupHeader{ margin: 10px; }
+    </STYLE>
+    <SCRIPT src="http://code.jquery.com/jquery-1.9.1.min.js">
+    </SCRIPT>
+    <SCRIPT src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js">
+    </SCRIPT>
+    <SCRIPT src="assets/js/mysign.js">
+    </SCRIPT>
+    <LINK href="css/ap-scroll-top.css" rel="stylesheet">
+    <META name="GENERATOR" content="MSHTML 11.00.10570.1001">
+    <STYLE>
+      .savehidden1 {
+      display: none !important;
+      }
+    </STYLE>
+  </HEAD>
+  <BODY class="{$stylename} function-view" {$bodyattrs}>
+    {BEGIN body}
+      <DIV class="bs-top">
+        {BEGIN buttons-container}
+          <DIV align="center" style="padding: 3px;">
+            <DIV id="buttons-container">
+              <DIV id="top-buttons">
+                {BEGIN back_button}
+                  <A class="btn btn-default btn-sm" onclick="window.location.href='transactions_list.php?a=return'" href="#" {$backbutton_attrs}>
+                    Back
+                  </A>
+                {END back_button}
+                <A class="btn btn-default btn-sm" id="Edit" href="#" typeid="ib">
+                  Edit
+                </A>
+                {BEGIN edit_button}
+                  <A class="btn btn-default btn-sm" style="display: none;" onclick="if (confirm('WARNING! To edit record all signatures in this Form will be cleared. To proceed click OK, or Cancel to abort action.')){return true;}else{return false;}" href="form1_edit.php?editid1={$editid1_value}">
+                    Edit
+                  </A>
+                {END edit_button}
+                <A class="btn btn-default btn-sm" id="print" onclick="window.print(); return false;" href="#">
+                  Print
+                </A>
+              </DIV>
+            </DIV>
+          </DIV>
+        {END buttons-container}
+        <page size="A4">
+        <DIV align="center" style="font-family: Times New Roman; font-size: 13pt;">
+          <TABLE bordercolor="" style="width: 185mm; height: 297mm;" bgcolor="" border="0" 
+rules="" cellspacing="2" cellpadding="10">
+            <TBODY>
+              <TR>
+                <TD style="height: 100px; white-space: normal;" rowspan="1" colspan="3">
+                  <DIV align="center">
+                    <FONT face="Times New Roman"><FONT size="5">ESTATE AGENCY AGREEMENT FOR<BR>THE SALE OF RESIDENTIAL PROPERTY</FONT></FONT>
+                  </DIV>
+                </TD>
+              </TR>
+              <TR>
+                <TD rowspan="1" colspan="3">
+                  <P align="justify">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This form is prescribed by the Council for Estate Agencies (‘‘CEA’’) under the Estate Agents Act 2010 for use when an estate agent is authorised or engaged by a prospective seller to introduce a buyer of residential property
+                    <SUP>
+                      (2)
+                    </SUP>
+                    in Singapore.
+                  </P>
+                </TD>
+              </TR>
+              
+              <TR>
+                <TD rowspan="1" colspan="3">
+                  <P align="justify">
+                    &nbsp;&nbsp;&nbsp;&nbsp;<EM>Note</EM>: &nbsp;Where a number in brackets (e.g.
+                    <SUP>
+                      (1)
+                    </SUP>
+                    ) appears in this Agreement, please read the explanatory note that bears the corresponding number in Schedule 1 to this Agreement. Where any space provided below is insufficient, the relevant particulars should be written on a separate sheet and attached to this Agreement.
+                  </P>
+                </TD>
+              </TR>
+              
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" 
+      colspan="1">
+                  <FONT face="Times New Roman">&nbsp;1.</FONT>
+                </TD>
+                <TD rowspan="1" colspan="1">
+                  <FONT face="Times New Roman">Parties to Agreement</FONT>
+                </TD>
+                <TD class="runner-cc" rowspan="1" colspan="1">
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" colspan="3">
+                  &nbsp;
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" 
+      colspan="1">
+                  <FONT face="Times New Roman">&nbsp;</FONT>
+                </TD>
+                <TD rowspan="1" colspan="1">
+                  <FONT face="Times New Roman">Agreement Date:&nbsp;</FONT><U>{$date_agreement_value}</U><FONT face="Times New Roman"></FONT>
+                </TD>
+                <TD class="runner-cc" rowspan="1" colspan="1">
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" 
+      colspan="3">
+                  <FONT face="Times New Roman">&nbsp;</FONT><FONT face="Times New Roman">&nbsp;</FONT>
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" 
+      colspan="1">
+                  <FONT face="Times New Roman">&nbsp;</FONT>
+                </TD>
+                <TD rowspan="1" colspan="1">
+                  Seller (1) Name:&nbsp;<U>{$seller1_value}</U>
+                </TD>
+                <TD style="width: 350px; white-space: nowrap;" rowspan="1" colspan="1">
+                  NRIC No.
+                  <SUP>
+                    (3)
+                  </SUP>
+                  :&nbsp;&nbsp;<U>{$seller1_id_value}</U>
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" 
+      colspan="1">
+                  <FONT face="Times New Roman">&nbsp;</FONT>
+                </TD>
+                <TD style="white-space: nowrap;" rowspan="1" colspan="2">
+                  Address:&nbsp;<u>{$seller1_address_value}</u>
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" 
+      colspan="3">
+                  <FONT face="Times New Roman">&nbsp;</FONT><FONT face="Times New Roman">&nbsp;</FONT>
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" 
+      colspan="1">
+                  <FONT face="Times New Roman">&nbsp;</FONT>
+                </TD>
+                <TD rowspan="1" colspan="1">
+                  Seller (2) Name:&nbsp;<U>{$seller2_value}</U>
+                </TD>
+                <TD class="runner-cc" style="white-space: nowrap;" rowspan="1" colspan="1">
+                  NRIC No.
+                  <SUP>
+                    (3)
+                  </SUP>
+                  :&nbsp;<U>{$seller2_id_value}</U>
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" colspan="1">
+                  &nbsp;
+                </TD>
+                <TD style="white-space: nowrap;" rowspan="1" colspan="2">
+                  Address: &nbsp;<U>{$seller2_address_value}</U>&nbsp;&nbsp;Singapore&nbsp;<U>{$seller2_postcode_value}</U>
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" 
+      colspan="3">
+                  <FONT face="Times New Roman">&nbsp;</FONT><FONT face="Times New Roman">&nbsp;</FONT>
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" 
+      colspan="1">
+                  <FONT face="Times New Roman">&nbsp;</FONT>
+                </TD>
+                <TD rowspan="1" colspan="1">
+                  Seller (3) Name:&nbsp;<U>{$seller3_value}</U>
+                </TD>
+                <TD class="runner-cc" style="white-space: nowrap;" rowspan="1" colspan="1">
+                  NRIC No.
+                  <SUP>
+                    (3)
+                  </SUP>
+                  :&nbsp;<U>{$seller3_id_value}</U>
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" 
+      colspan="1">
+                  <FONT face="Times New Roman">&nbsp;</FONT>
+                </TD>
+                <TD style="white-space: nowrap;" rowspan="1" colspan="2">
+                  Address:&nbsp;<U>{$seller3_address_value}</U>&nbsp;&nbsp;Singapore&nbsp;<U>{$seller3_postcode_value}</U>
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" 
+      colspan="3">
+                  <FONT face="Times New Roman">&nbsp;</FONT><FONT face="Times New Roman">&nbsp;</FONT>
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" 
+      colspan="1">
+                  <FONT face="Times New Roman">&nbsp;</FONT>
+                </TD>
+                <TD rowspan="1" colspan="1">
+                  Seller (4) Name:&nbsp;<U>{$seller4_value}</U>
+                </TD>
+                <TD class="runner-cc" style="white-space: nowrap;" rowspan="1" colspan="1">
+                  NRIC No.
+                  <SUP>
+                    (3)
+                  </SUP>
+                  :&nbsp;<U>{$seller4_id_value}</U>
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" 
+      colspan="1">
+                  <FONT face="Times New Roman">&nbsp;</FONT>
+                </TD>
+                <TD style="white-space: nowrap;" rowspan="1" colspan="2">
+                  Address:&nbsp;<U>{$seller4_address_value}</U>&nbsp;&nbsp;Singapore&nbsp;<U>{$seller4_postcode_value}</U>
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" colspan="3">
+                  <FONT face="Times New Roman">&nbsp;</FONT><FONT 
+      face="Times New Roman">&nbsp;</FONT>
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" 
+      colspan="1">
+                  <FONT face="Times New Roman">&nbsp;</FONT>
+                </TD>
+                <TD rowspan="1" colspan="1">
+                  Name of Estate Agent:&nbsp;<U>{$estateagent_value}</U>
+                </TD>
+                <TD class="runner-cc" style="white-space: nowrap;" rowspan="1" colspan="1">
+                  License No.:&nbsp;<U>{$estateagent_cea_value}</U>
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" 
+      colspan="1">
+                  <FONT face="Times New Roman">&nbsp;</FONT>
+                </TD>
+                <TD rowspan="1" colspan="2">
+                  Address:&nbsp;<U>{$estateagent_address_value}</U>&nbsp;&nbsp;Singapore&nbsp;<U>{$estateagent_postcode_value}</U>
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" 
+      colspan="3">
+                  <FONT face="Times New Roman">&nbsp;</FONT><FONT face="Times New Roman">&nbsp;</FONT>
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" 
+      colspan="1">
+                  <FONT face="Times New Roman">&nbsp;2.</FONT>
+                </TD>
+                <TD rowspan="1" colspan="2">
+                  Appointment of Estate Agent by Seller
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" 
+      colspan="3">
+                  <FONT face="Times New Roman">&nbsp;</FONT><FONT face="Times New Roman">&nbsp;</FONT>
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" 
+      colspan="1">
+                  <FONT face="Times New Roman">&nbsp;</FONT>
+                </TD>
+                <TD rowspan="1" colspan="2">
+                  <P align="justify">
+                    <FONT face="Times New Roman">The above seller(s) (collectively called ‘‘Seller’’) hereby authorises and engages the Estate Agent
+                    <SUP>
+                      (5)
+                    </SUP>
+                    , subject to and in accordance with the terms of this Agreement, to introduce to him a Buyer
+                    <SUP>
+                      (6)
+                    </SUP>
+                    of the following Property
+                    <SUP>
+                      (7)
+                    </SUP>
+                    :</FONT>
+                  </P>
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" 
+      colspan="1">
+                  <FONT face="Times New Roman">&nbsp;</FONT>
+                </TD>
+                <TD rowspan="1" colspan="2">
+                  &nbsp;<U>{$property_address_value}</U>&nbsp;&nbsp;("Property")
+                </TD>
+              </TR>
+              <TR>
+                <TD style="height: 20px; white-space: normal;" rowspan="1" 
+  colspan="3">
+                </TD>
+              </TR>
+              <TR>
+                <TD style="padding-left: 20px;" rowspan="1" colspan="3">
+                  <TABLE width="100%" border="0" cellspacing="1" cellpadding="1">
+                    <TBODY>
+                      <TR>
+                        <TD rowspan="1" colspan="1">
+                          &nbsp;<EM><FONT 
+            size="2">Seller 1 initial:</FONT></EM>
+                        </TD>
+                        <TD rowspan="1" colspan="1">
+                          &nbsp;<EM><FONT 
+            size="2">Seller 2 initial:</FONT></EM>
+                        </TD>
+                        <TD rowspan="1" colspan="1">
+                          &nbsp;<EM><FONT 
+            size="2">Seller 3 initial:</FONT></EM>
+                        </TD>
+                        <TD rowspan="1" colspan="1">
+                          &nbsp;<EM><FONT 
+            size="2">Seller 4 initial:</FONT></EM>
+                        </TD>
+                      </TR>
+                      <TR>
+                        <TD>
+                          <DIV id="dbsign1">
+                            {$sign_seller1_value}
+                          </DIV>
+                          <DIV id="buttons-container">
+                            <DIV id="signature1">
+                              <A class="btn btn-default btn-sm" onclick="window.signID = 'signature1';" href="#divPopUpSignContract" data-rel="popup">
+                                Sign
+                              </A>
+                              <A class="rnr-button button savehidden" id="Save_sign1" href="#" typeid="ib">
+                                Save_sign1
+                              </A>
+                              <A class="btn btn-default btn-sm" id="X" href="#" typeid="ib">
+                                X
+                              </A>
+                            </DIV>
+                          </DIV>
+                        </TD>
+                        <TD>
+                          <DIV id="dbsign2">
+                            {$sign_seller2_value}
+                          </DIV>
+                          <DIV id="buttons-container">
+                            <DIV id="signature2">
+                              <A class="btn btn-default btn-sm" onclick="window.signID = 'signature2';" href="#divPopUpSignContract" data-rel="popup">
+                                Sign
+                              </A>
+                              <A class="rnr-button button savehidden" id="Save_sign2" href="#" typeid="ib">
+                                Save_sign2
+                              </A>
+                              <A class="btn btn-default btn-sm" id="X10" href="#" typeid="ib">
+                                X
+                              </A>
+                            </DIV>
+                          </DIV>
+                        </TD>
+                        <TD>
+                          <DIV id="dbsign3">
+                            {$sign_seller3_value}
+                          </DIV>
+                          <DIV id="buttons-container">
+                            <DIV id="signature3">
+                              <A class="btn btn-default btn-sm" onclick="window.signID = 'signature3';" href="#divPopUpSignContract" data-rel="popup">
+                                Sign
+                              </A>
+                              <A class="rnr-button button savehidden" id="save_sign38" href="#" typeid="ib">
+                                Save_sign3
+                              </A>
+                              <A class="btn btn-default btn-sm" id="X20" href="#" typeid="ib">
+                                X
+                              </A>
+                            </DIV>
+                          </DIV>
+                        </TD>
+                        <TD>
+                          <DIV id="dbsign4">
+                            {$sign_seller4_value}
+                          </DIV>
+                          <DIV id="buttons-container">
+                            <DIV id="signature4">
+                              <A class="btn btn-default btn-sm" onclick="window.signID = 'signature4';" href="#divPopUpSignContract" data-rel="popup">
+                                Sign
+                              </A>
+                              <A class="rnr-button button savehidden" id="save_sign4" href="#" typeid="ib">
+                                Save_sign4
+                              </A>
+                              <A class="btn btn-default btn-sm" id="X30" href="#" typeid="ib">
+                                X
+                              </A>
+                            </DIV>
+                          </DIV>
+                        </TD>
+                      </TR>
+                    </TBODY>
+                  </TABLE>
+                </TD>
+              </TR>
+              <TR>
+                <TD rowspan="1" colspan="3">
+                  <DIV class="form-name">
+                    {$form_name_value}
+                  </DIV>
+                </TD>
+              </TR>
+              <TR>
+                <TD rowspan="1" colspan="3">
+                  <DIV align="center">
+                    <FONT size="2">Page 1 of 7</FONT>
+                  </DIV>
+                </TD>
+              </TR>
+            </TBODY>
+          </TABLE>
+        </DIV>
+        </page>
+        <page size="A4">
+        <DIV align="center" style="font-family: Times New Roman; font-size: 13pt;">
+          <TABLE bordercolor="" style="width: 185mm; height: 297mm;" bgcolor="" border="0" 
+rules="" cellspacing="2" cellpadding="10">
+            <TBODY>
+              <TR>
+                <TD style="height: 50px; white-space: nowrap;" rowspan="1" 
+  colspan="5">
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" colspan="1">
+                  &nbsp;3.
+                </TD>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" colspan="3">
+                  Scope of Agency and Duties of Estate Agent
+                </TD>
+                <TD class="runner-cc" rowspan="1" colspan="1">
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" colspan="5">
+                  &nbsp; &nbsp;
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" colspan="5">
+                  <P align="justify">
+                    The Estate Agent’s duties shall be as set out in Schedule 2 to this Agreement, in addition to the duties placed on the Estate Agent by the other terms in this Agreement and any written law.
+                  </P>
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" colspan="5">
+                  &nbsp;
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" colspan="1">
+                  &nbsp;4.
+                </TD>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" colspan="3">
+                  Commission&nbsp;
+                </TD>
+                <TD class="runner-cc" rowspan="1" colspan="1">
+                </TD>
+              </TR>
+              <TR valign="top">
+                <TD style="white-space: normal;" rowspan="1" colspan="1">
+                </TD>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" colspan="1">
+                  (a)
+                </TD>
+                <TD style="white-space: normal;" rowspan="1" colspan="3">
+                  <DIV align="justify">
+                    If the Seller enters into a binding agreement for the sale and purchase
+                    <SUP>
+                      (8)
+                    </SUP>
+                    of the Property with a Buyer introduced by the Estate Agent, the Seller shall pay the Estate Agent commission of&nbsp;S<U>{$comm_value}</U>&nbsp;/ at the rate of&nbsp;<U>{$percentage_value}</U>
+                    <SUP>
+                      (1) (9)
+                    </SUP>
+                    of the transacted price of the Property at the time of completion of the Property transaction pursuant to the agreement for sale and purchase.
+                  </DIV>
+                </TD>
+              </TR>
+              <TR>
+                <TD rowspan="1" colspan="5">
+                  &nbsp;
+                </TD>
+              </TR>
+              <TR>
+                <TD style="white-space: normal;" rowspan="1" colspan="1">
+                  &nbsp;
+                </TD>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" colspan="1">
+                </TD>
+                <TD style="white-space: normal;" rowspan="1" colspan="3">
+                  GST is payable upon the commission:&nbsp;<U>{$GST_value}</U><BR>
+                </TD>
+              </TR>
+              <TR>
+                <TD rowspan="1" colspan="5">
+                  &nbsp;
+                </TD>
+              </TR>
+              {BEGIN gst_include_fieldblock}
+                <TR>
+                  <TD style="width: 30px; white-space: normal;" rowspan="1" colspan="1">
+                    &nbsp;
+                  </TD>
+                  <TD style="width: 30px; white-space: normal;" rowspan="1" colspan="1">
+                  </TD>
+                  <TD rowspan="1" colspan="3">
+                    If Yes, the commission specified is&nbsp;<U>{$gst_include_value}&nbsp;</U>&nbsp;
+                    <SUP>
+                      (1)
+                    </SUP>
+                  </TD>
+                </TR>
+              {END gst_include_fieldblock}
+              <TR>
+                <TD rowspan="1" colspan="5">
+                  &nbsp;
+                </TD>
+              </TR>
+              <TR>
+                <TD style="white-space: normal;" rowspan="1" colspan="1">
+                  &nbsp;
+                </TD>
+                <TD class="runner-cc" style="width: 30px; white-space: normal;" rowspan="1" colspan="1">
+                </TD>
+                <TD valign="top" style="width: 50px; white-space: normal;" rowspan="1" 
+    colspan="1">
+                  Note:
+                </TD>
+                <TD style="white-space: normal;" rowspan="1" colspan="2">
+                  <P align="justify">
+                    If a Buyer introduced by the Estate Agent has entered into a sale and purchase agreement with the Seller in respect of the Property, the name and address of the Buyer and the date of the sale and purchase agreement may be recorded as follows:
+                  </P>
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" colspan="1">
+                  &nbsp;
+                </TD>
+                <TD class="runner-cc" style="width: 30px; white-space: normal;" rowspan="1" colspan="1">
+                </TD>
+                <TD rowspan="1" colspan="1">
+                  &nbsp;
+                </TD>
+                <TD class="runner-cc" rowspan="1" colspan="1">
+                  Buyer Name:&nbsp;&nbsp;<U>{$buyer1_value}</U>
+                </TD>
+                <TD class="runner-cc" rowspan="1" colspan="1">
+                </TD>
+              </TR>
+              <TR>
+                <TD rowspan="1" colspan="1">
+                </TD>
+                <TD class="runner-cc" rowspan="1" colspan="1">
+                </TD>
+                <TD rowspan="1" colspan="1">
+                </TD>
+                <TD class="runner-cc" style="width: 250px; white-space: nowrap;" rowspan="1" colspan="1">
+                  Address:&nbsp;<U>{$buyer1_address_value}</U>
+                </TD>
+                <TD class="runner-cc" style="white-space: nowrap;" rowspan="1" colspan="1">
+                  Singapore&nbsp;<U>{$buyer1_postcode_value}</U>
+                </TD>
+              </TR>
+              <TR>
+                <TD rowspan="1" colspan="1">
+                </TD>
+                <TD class="runner-cc" rowspan="1" colspan="1">
+                </TD>
+                <TD rowspan="1" colspan="1">
+                </TD>
+                <TD class="runner-cc" rowspan="1" colspan="1">
+                  Date of S&P:&nbsp;&nbsp;<U>{$date_sp_value}</U>
+                </TD>
+                <TD class="runner-cc" rowspan="1" colspan="1">
+                </TD>
+              </TR>
+              <TR>
+                <TD rowspan="1" colspan="5">
+                  &nbsp;
+                </TD>
+              </TR>
+              <TR>
+                <TD style="white-space: normal;" rowspan="1" colspan="1">
+                  &nbsp;
+                </TD>
+                <TD valign="top" style="width: 30px; white-space: normal;" rowspan="1" 
+    colspan="1">
+                  (b)
+                </TD>
+                <TD colspan="3" 1"="">
+                  <P align="justify">
+                    The Seller shall have no obligation to pay any commission to the Estate Agent if completion of the Property transaction falls through without fault on the part of the Seller.
+                  </P>
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" colspan="5">
+                  &nbsp;
+                </TD>
+              </TR>
+              <TR>
+                <TD style="white-space: normal;" rowspan="1" colspan="1">
+                  &nbsp;
+                </TD>
+                <TD valign="top" style="width: 30px; white-space: normal;" rowspan="1" 
+    colspan="1">
+                  (c)
+                </TD>
+                <TD style="white-space: normal;" rowspan="1" colspan="3">
+                  <P align="justify">
+                    In the case of HDB property, if completion of the Property transaction falls through by reason of the Seller’s ineligibility to sell under HDB rules or regulations, the Seller shall have no obligation to pay any commission to the Estate Agent.
+                  </P>
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" colspan="5">
+                  &nbsp; &nbsp;
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" colspan="1">
+                  &nbsp;5.
+                </TD>
+                <TD class="runner-cc" style="width: 30px; white-space: normal;" rowspan="1" colspan="3">
+                  Disclosure Requirements
+                </TD>
+                <TD class="runner-cc" rowspan="1" colspan="1">
+                </TD>
+              </TR>
+              <TR>
+                <TD style="white-space: normal;" rowspan="1" colspan="1">
+                  &nbsp;
+                </TD>
+                <TD valign="top" style="width: 30px; white-space: normal;" rowspan="1" 
+    colspan="1">
+                  (a)
+                </TD>
+                <TD style="white-space: normal;" rowspan="1" colspan="3">
+                  The Estate Agent or Salesperson&nbsp;<U>{$conflict_value}</U>&nbsp;
+                  <SUP>
+                    (1) (10)
+                  </SUP>
+                  a conflict or potential conflict of interest in acting for the Seller. If the Estate Agent or Salesperson has a conflict or potential conflict of interest, the details are as follows:
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" colspan="5">
+                  &nbsp;
+                </TD>
+              </TR>
+              {BEGIN conflict_fieldblock}
+                <TR>
+                  <TD style="width: 30px; white-space: normal;" rowspan="1" colspan="1">
+                    &nbsp;
+                  </TD>
+                  <TD style="width: 30px; white-space: normal;" rowspan="1" colspan="1">
+                    &nbsp;
+                  </TD>
+                  <TD class="runner-cc" style="width: 30px; white-space: normal;" rowspan="1" colspan="3">
+                    <U>{$conflict_description_value}</U>
+                  </TD>
+                </TR>
+              {END conflict_fieldblock}
+              <TR>
+                <TD style="height: 120px; white-space: normal;" rowspan="1" colspan="5">
+                  &nbsp;
+                </TD>
+              </TR>
+              <TR>
+                <TD style="padding-left: 20px;" rowspan="1" colspan="5">
+                  <TABLE width="100%" border="0" cellspacing="1" cellpadding="1">
+                    <TBODY>
+                      <TR>
+                        <TD>
+                          &nbsp;<EM><FONT size="2">Seller 1 initial:</FONT></EM>
+                        </TD>
+                        <TD>
+                          &nbsp;<EM><FONT size="2">Seller 2 initial:</FONT></EM>
+                        </TD>
+                        <TD>
+                          &nbsp;<EM><FONT size="2">Seller 3 initial:</FONT></EM>
+                        </TD>
+                        <TD>
+                          &nbsp;<EM><FONT size="2">Seller 4 initial:</FONT></EM>
+                        </TD>
+                      </TR>
+                      <TR>
+                        <TD>
+                          <DIV id="dbsign5">
+                            {$sign_seller5_value}
+                          </DIV>
+                          <DIV id="buttons-container">
+                            <DIV id="signature5">
+                              <A class="rnr-button" onclick="window.signID = 'signature5';" href="#divPopUpSignContract" data-rel="popup">
+                                Sign
+                              </A>
+                              <A class="rnr-button button" id="X108" href="#" typeid="ib">
+                                X
+                              </A>
+                              <A class="rnr-button button savehidden" id="Save_sign5" href="#" typeid="ib">
+                                Save_sign5
+                              </A>
+                            </DIV>
+                          </DIV>
+                        </TD>
+                        <TD>
+                          <DIV id="dbsign6">
+                            {$sign_seller6_value}
+                          </DIV>
+                          <DIV id="buttons-container">
+                            <DIV id="signature6">
+                              <A class="rnr-button" onclick="window.signID = 'signature6';" href="#divPopUpSignContract" data-rel="popup">
+                                Sign
+                              </A>
+                              <A class="rnr-button button" id="X109" href="#" typeid="ib">
+                                X
+                              </A>
+                              <A class="rnr-button button savehidden" id="Save_sign6" href="#" typeid="ib">
+                                Save_sign6
+                              </A>
+                            </DIV>
+                          </DIV>
+                        </TD>
+                        <TD>
+                          <DIV id="dbsign7">
+                            {$sign_seller7_value}
+                          </DIV>
+                          <DIV id="buttons-container">
+                            <DIV id="signature7">
+                              <A class="rnr-button" onclick="window.signID = 'signature7';" href="#divPopUpSignContract" data-rel="popup">
+                                Sign
+                              </A>
+                              <A class="rnr-button button" id="X118" href="#" typeid="ib">
+                                X
+                              </A>
+                              <A class="rnr-button button savehidden" id="Save_sign8" href="#" typeid="ib">
+                                Save_sign7
+                              </A>
+                            </DIV>
+                          </DIV>
+                        </TD>
+                        <TD>
+                          <DIV id="dbsign8">
+                            {$sign_seller8_value}
+                          </DIV>
+                          <DIV id="buttons-container">
+                            <DIV id="signature8">
+                              <A class="rnr-button" onclick="window.signID = 'signature8';" href="#divPopUpSignContract" data-rel="popup">
+                                Sign
+                              </A>
+                              <A class="rnr-button button" id="X119" href="#" typeid="ib">
+                                X
+                              </A>
+                              <A class="rnr-button button savehidden" id="Save_sign9" href="#" typeid="ib">
+                                Save_sign8
+                              </A>
+                            </DIV>
+                          </DIV>
+                        </TD>
+                      </TR>
+                    </TBODY>
+                  </TABLE>
+                </TD>
+                <TD class="runner-cc" rowspan="1" colspan="1">
+                </TD>
+              </TR>
+              <TR>
+                <TD rowspan="1" colspan="5">
+                  <DIV class="form-name">
+                    {$form_name_value}
+                  </DIV>
+                </TD>
+              </TR>
+              <TR>
+                <TD rowspan="1" colspan="5">
+                  <DIV align="center">
+                    <FONT size="2">Page 2 of 7</FONT>
+                  </DIV>
+                </TD>
+              </TR>
+            </TBODY>
+          </TABLE>
+        </DIV>
+        </page>
+        <page size="A4">
+        <DIV align="center" style="font-family: Times New Roman; font-size: 13pt;">
+          <TABLE bordercolor="" style="width: 185mm; height: 297mm;" bgcolor="" border="0" 
+rules="" cellspacing="2" cellpadding="10">
+            <TBODY>
+              <TR>
+                <TD style="height: 50px; white-space: nowrap;" rowspan="1" colspan="4">
+                  &nbsp;
+                </TD>
+              </TR>
+              <TR valign="top">
+                <TD style="width: 30px; white-space: normal;" rowspan="1" colspan="1">
+                  &nbsp;
+                </TD>
+                <TD valign="top" style="width: 30px; white-space: normal;" rowspan="1" 
+    colspan="1">
+                  (b)
+                </TD>
+                <TD rowspan="1" colspan="2">
+                  <P align="justify">
+                    If the Estate Agent or Salesperson has declared that there is no conflict or potential conflict of interest but a conflict or potential conflict of interest only arises (or he becomes aware of the conflict or potential conflict of interest) after the execution of this Agreement, the conflict or potential conflict of interest must be immediately disclosed in writing to the Seller. Upon such disclosure, the Estate Agent and Salesperson may continue to act for the Seller only if the Seller, being fully informed, consents in writing to the Estate Agent and Salesperson continuing to act for him.
+                  </P>
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" colspan="4">
+                  &nbsp;
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" colspan="1">
+                  &nbsp;6.
+                </TD>
+                <TD class="runner-cc" style="width: 30px; white-space: normal;" rowspan="1" colspan="3">
+                  Property Inspection and Co-broking&nbsp;
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" colspan="4">
+                  &nbsp;
+                </TD>
+              </TR>
+              <TR valign="top">
+                <TD style="width: 30px; white-space: normal;" rowspan="1" colspan="1">
+                </TD>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" colspan="1">
+                  (a)
+                </TD>
+                <TD rowspan="1" colspan="2">
+                  <P align="justify">
+                    The Seller agrees to allow the Estate Agent to show the property to potential Buyer(s) (including their agents) at mutually agreeable time(s).
+                  </P>
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" colspan="4">
+                  &nbsp;
+                </TD>
+              </TR>
+              <TR valign="top">
+                <TD style="width: 30px; white-space: normal;" rowspan="1" colspan="1">
+                  &nbsp;
+                </TD>
+                <TD valign="top" style="width: 30px; white-space: normal;" rowspan="1" 
+    colspan="1">
+                  (b)
+                </TD>
+                <TD rowspan="1" colspan="2">
+                  The Estate Agent&nbsp;<U>{$co_broke_value}</U>&nbsp;
+                  <SUP>
+                    (1)
+                  </SUP>
+                  co-operate or co-broke with another Estate Agent to secure Buyers for the Property.
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" colspan="4">
+                  &nbsp;
+                </TD>
+              </TR>
+              <TR valign="top">
+                <TD style="width: 30px; white-space: normal;" rowspan="1" colspan="1">
+                  &nbsp;
+                </TD>
+                <TD valign="top" style="width: 30px; white-space: normal;" rowspan="1" 
+    colspan="1">
+                  (c)
+                </TD>
+                <TD rowspan="1" colspan="2">
+                  <P align="justify">
+                    If co-broking is allowed, the commission may be shared between the Estate Agent and a co-broking agent in such amounts as may be agreed between them but the Seller is not liable to pay any commission to the co-broking agent.
+                  </P>
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" colspan="4">
+                  &nbsp;
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" colspan="1">
+                  &nbsp;7.
+                </TD>
+                <TD class="runner-cc" style="width: 30px; white-space: normal;" rowspan="1" colspan="3">
+                  Warranty by Seller
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" colspan="4">
+                  &nbsp;
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" colspan="4">
+                  The Seller warrants that he is&nbsp;<U>{$ownership_value}</U>&nbsp;
+                  <SUP>
+                    (1)
+                  </SUP>
+                  to sell the Property.
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" colspan="4">
+                  &nbsp;
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" colspan="1">
+                  &nbsp;8.
+                </TD>
+                <TD class="runner-cc" style="width: 30px; white-space: normal;" rowspan="1" colspan="3">
+                  Schedules and Notes
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" 
+      colspan="4">
+                  &nbsp;
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" colspan="4">
+                  The Schedules and Notes to or in this Agreement form part of this Agreement.
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" colspan="4">
+                  &nbsp;
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" colspan="1">
+                  &nbsp;9.
+                </TD>
+                <TD class="runner-cc" style="width: 30px; white-space: normal;" rowspan="1" colspan="3">
+                  Applicable Law and Dispute Resolution
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" 
+      colspan="4">
+                  &nbsp;
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" colspan="1">
+                  &nbsp;
+                </TD>
+                <TD class="runner-cc" style="width: 30px; white-space: normal;" rowspan="1" colspan="1">
+                  (a)
+                </TD>
+                <TD class="runner-cc" rowspan="1" colspan="2">
+                  This Agreement shall be governed by the laws of Singapore.
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" colspan="4">
+                  &nbsp;
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" colspan="1">
+                  &nbsp;
+                </TD>
+                <TD valign="top" style="width: 30px; white-space: normal;" rowspan="1" 
+    colspan="1">
+                  (b)
+                </TD>
+                <TD class="runner-cc" style="white-space: normal;" rowspan="1" colspan="2">
+                  <P align="justify">
+                    Any dispute between the Seller and the Estate Agent arising out of or in connection with this Agreement (including any question regarding its existence, validity or termination) shall first be resolved in the following manner:
+                  </P>
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" colspan="4">
+                  &nbsp;
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" colspan="1">
+                  &nbsp;
+                </TD>
+                <TD class="runner-cc" style="width: 30px; white-space: normal;" rowspan="1" colspan="1">
+                </TD>
+                <TD class="runner-cc" rowspan="1" colspan="2">
+                  <U>Mediation First</U>
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" colspan="1">
+                  &nbsp;
+                </TD>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" colspan="1">
+                </TD>
+                <TD valign="top" style="width: 35px; white-space: normal;" rowspan="1" 
+    colspan="1">
+                  (i)
+                </TD>
+                <TD valign="top" rowspan="1" colspan="1">
+                  <P align="justify">
+                    The parties shall proceed to mediation under the mediation scheme prescribed by the CEA unless the Seller elects in writing not to mediate.
+                  </P>
+                </TD>
+              </TR>
+              <TR>
+                <TD style="height: 80px; white-space: normal;" rowspan="1" colspan="4">
+                  &nbsp;
+                </TD>
+              </TR>
+              <TR>
+                <TD style="padding-left: 20px;" rowspan="1" colspan="4">
+                  <TABLE width="100%" border="0" cellspacing="1" cellpadding="1">
+                    <TBODY>
+                      <TR>
+                        <TD>
+                          &nbsp;<EM><FONT size="2">Seller 1 initial:</FONT></EM>
+                        </TD>
+                        <TD>
+                          &nbsp;<EM><FONT size="2">Seller 2 initial:</FONT></EM>
+                        </TD>
+                        <TD>
+                          &nbsp;<EM><FONT size="2">Seller 3 initial:</FONT></EM>
+                        </TD>
+                        <TD>
+                          &nbsp;<EM><FONT size="2">Seller 4 initial:</FONT></EM>
+                        </TD>
+                      </TR>
+                      <TR>
+                        <TD>
+                          <DIV id="dbsign9">
+                            {$sign_seller9_value}
+                          </DIV>
+                          <DIV id="buttons-container">
+                            <DIV id="signature9">
+                              <A class="rnr-button" onclick="window.signID = 'signature9';" href="#divPopUpSignContract" data-rel="popup">
+                                Sign
+                              </A>
+                              <A class="rnr-button button savehidden" id="Save_sign91" href="#" typeid="ib">
+                                Save_sign9
+                              </A>
+                              <A class="rnr-button button" id="X120" href="#" typeid="ib">
+                                X
+                              </A>
+                            </DIV>
+                          </DIV>
+                        </TD>
+                        <TD>
+                          <DIV id="dbsign10">
+                            {$sign_seller10_value}
+                          </DIV>
+                          <DIV id="buttons-container">
+                            <DIV id="signature10">
+                              <A class="rnr-button" onclick="window.signID = 'signature10';" href="#divPopUpSignContract" data-rel="popup">
+                                Sign
+                              </A>
+                              <A class="rnr-button button savehidden" id="Save_sign10" href="#" typeid="ib">
+                                Save_sign10
+                              </A>
+                              <A class="rnr-button button" id="X121" href="#" typeid="ib">
+                                X
+                              </A>
+                            </DIV>
+                          </DIV>
+                        </TD>
+                        <TD>
+                          <DIV id="dbsign11">
+                            {$sign_seller11_value}
+                          </DIV>
+                          <DIV id="buttons-container">
+                            <DIV id="signature11">
+                              <A class="rnr-button" onclick="window.signID = 'signature11';" href="#divPopUpSignContract" data-rel="popup">
+                                Sign
+                              </A>
+                              <A class="rnr-button button savehidden" id="Save_sign111" href="#" typeid="ib">
+                                Save_sign11
+                              </A>
+                              <A class="rnr-button button" id="X122" href="#" typeid="ib">
+                                X
+                              </A>
+                            </DIV>
+                          </DIV>
+                        </TD>
+                        <TD>
+                          <DIV id="dbsign12">
+                            {$sign_seller12_value}
+                          </DIV>
+                          <DIV id="buttons-container">
+                            <DIV id="signature12">
+                              <A class="rnr-button" onclick="window.signID = 'signature12';" href="#divPopUpSignContract" data-rel="popup">
+                                Sign
+                              </A>
+                              <A class="rnr-button button savehidden" id="Save_sign121" href="#" typeid="ib">
+                                Save_sign12
+                              </A>
+                              <A class="rnr-button button" id="X123" href="#" typeid="ib">
+                                X
+                              </A>
+                            </DIV>
+                          </DIV>
+                        </TD>
+                      </TR>
+                    </TBODY>
+                  </TABLE>
+                </TD>
+              </TR>
+              <TR>
+                <TD rowspan="1" colspan="4">
+                  <DIV class="form-name">
+                    {$form_name_value}
+                  </DIV>
+                </TD>
+              </TR>
+              <TR>
+                <TD rowspan="1" colspan="4">
+                  <DIV align="center">
+                    <FONT size="2">Page 3 of 7</FONT>
+                  </DIV>
+                </TD>
+              </TR>
+            </TBODY>
+          </TABLE>
+        </DIV>
+        </page>
+        <page size="A4">
+        <DIV align="center" style="font-family: Times New Roman; font-size: 13pt;">
+          <TABLE bordercolor="" style="width: 185mm; height: 297mm;" bgcolor="" border="0" 
+rules="" cellspacing="2" cellpadding="10">
+            <TBODY>
+              <TR>
+                <TD style="height: 50px; white-space: normal;" rowspan="1" 
+  colspan="4">
+                </TD>
+              </TR>
+              <TR valign="top">
+                <TD style="white-space: normal;" rowspan="1" colspan="1">
+                  &nbsp;
+                </TD>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" colspan="1">
+                  &nbsp;
+                </TD>
+                <TD style="width: 35px; white-space: normal;" rowspan="1" colspan="1">
+                  (ii)
+                </TD>
+                <TD style="white-space: normal;" rowspan="1" colspan="1">
+                  <P align="justify">
+                    The Estate Agent may ask the Seller in writing whether he elects to mediate or not. If the Seller does not reply or make any election within three weeks of receipt of such enquiry, he shall be deemed to have elected in writing not to proceed to mediation.
+                  </P>
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" colspan="4">
+                  &nbsp;
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" colspan="1">
+                  &nbsp;
+                </TD>
+                <TD class="runner-cc" style="width: 30px; white-space: normal;" rowspan="1" colspan="1">
+                </TD>
+                <TD class="runner-cc" rowspan="1" colspan="2">
+                  <U>Arbitration</U>
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" colspan="4">
+                  &nbsp;
+                </TD>
+              </TR>
+              <TR valign="top">
+                <TD style="white-space: normal;" rowspan="1" colspan="1">
+                </TD>
+                <TD class="runner-cc" style="width: 30px; white-space: normal;" rowspan="1" colspan="1">
+                </TD>
+                <TD style="width: 35px; white-space: normal;" rowspan="1" colspan="1">
+                  (iii)
+                </TD>
+                <TD style="white-space: normal;" rowspan="1" colspan="1">
+                  <P align="justify">
+                    If the dispute remains outstanding (i.e. the Seller has elected not to mediate or the dispute is not resolved by mediation), the dispute shall be referred to and finally resolved by arbitration in Singapore under the arbitration scheme prescribed by the CEA, in accordance with such rules as may be prescribed, unless the Seller elects in writing not to arbitrate.
+                  </P>
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" colspan="4">
+                  &nbsp;
+                </TD>
+              </TR>
+              <TR valign="top">
+                <TD style="white-space: normal;" rowspan="1" colspan="1">
+                  &nbsp;
+                </TD>
+                <TD class="runner-cc" style="width: 30px; white-space: normal;" rowspan="1" colspan="1">
+                </TD>
+                <TD style="width: 35px; white-space: normal;" rowspan="1" colspan="1">
+                  (iv)
+                </TD>
+                <TD style="white-space: normal;" rowspan="1" colspan="1">
+                  <P align="justify">
+                    The Estate Agent may ask the Seller in writing whether he elects to resolve the dispute by arbitration or not. If the Seller does not reply or expressly make any election within three weeks of receipt of such enquiry, he shall be deemed to have elected in writing not to resolve the dispute by arbitration and neither party shall be bound to proceed to arbitration.
+                  </P>
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" colspan="4">
+                  &nbsp;
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" colspan="1">
+                  &nbsp;10.
+                </TD>
+                <TD class="runner-cc" style="width: 30px; white-space: normal;" rowspan="1" colspan="3">
+                  Additional Terms
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" colspan="4">
+                  &nbsp;
+                </TD>
+              </TR>
+              <TR>
+                <TD style="white-space: normal;" rowspan="1" colspan="4">
+                  <P align="justify">
+                    <U>Note</U>:&nbsp; The printed terms prescribed in this form of Agreement cannot be deleted or varied. If the parties wish at any time to agree to or add on any other terms, they must be in writing, dated, inserted as Additional Terms below and initialed by the parties. If the space below is insufficient, the Additional Terms are to be written/printed in black ink on a separate sheet of paper which must be&nbsp;<STRONG>pink</STRONG>&nbsp;in color and in a font&nbsp;<STRONG>not smaller</STRONG>&nbsp;than the font of the above terms.
+                  </P>
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" colspan="4">
+                  &nbsp;
+                </TD>
+              </TR>
+              <TR>
+                <TD style="white-space: normal;" rowspan="1" colspan="4">
+                  <P align="justify">
+                    The Additional Terms cannot conflict with, vary or otherwise limit the prescribed terms
+                    <SUP>
+                      (11)
+                    </SUP>
+                    of this Agreement.
+                  </P>
+                </TD>
+              </TR>
+              <TR>
+                <TD style="white-space: normal;" rowspan="1" colspan="4">
+                  &nbsp;
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 30px; white-space: normal;" rowspan="1" colspan="4">
+                  &nbsp;&nbsp;<U>{$additional_term_value}</U>
+                </TD>
+              </TR>
+              <TR style="height: 250px;">
+                <TD style="white-space: normal;" rowspan="1" colspan="4">
+                  &nbsp;
+                </TD>
+              </TR>
+              <TR>
+                <TD style="padding-left: 20px;" rowspan="1" colspan="4">
+                  <TABLE width="100%" border="0" cellspacing="1" cellpadding="1">
+                    <TBODY>
+                      <TR>
+                        <TD>
+                          &nbsp;<EM><FONT size="2">Seller 1 initial:</FONT></EM>
+                        </TD>
+                        <TD>
+                          &nbsp;<EM><FONT size="2">Seller 2 initial:</FONT></EM>
+                        </TD>
+                        <TD>
+                          &nbsp;<EM><FONT size="2">Seller 3 initial:</FONT></EM>
+                        </TD>
+                        <TD>
+                          &nbsp;<EM><FONT size="2">Seller 4 initial:</FONT></EM>
+                        </TD>
+                      </TR>
+                      <TR>
+                        <TD>
+                          <DIV id="dbsign13">
+                            {$sign_seller13_value}
+                          </DIV>
+                          <DIV id="buttons-container">
+                            <DIV id="signature13">
+                              <A class="rnr-button" onclick="window.signID = 'signature13';" href="#divPopUpSignContract" data-rel="popup">
+                                Sign
+                              </A>
+                              <A class="rnr-button button savehidden" id="Save_sign131" href="#" typeid="ib">
+                                Save_sign13
+                              </A>
+                              <A class="rnr-button button" id="X124" href="#" typeid="ib">
+                                X
+                              </A>
+                            </DIV>
+                          </DIV>
+                        </TD>
+                        <TD>
+                          <DIV id="dbsign14">
+                            {$sign_seller14_value}
+                          </DIV>
+                          <DIV id="buttons-container">
+                            <DIV id="signature14">
+                              <A class="rnr-button" onclick="window.signID = 'signature14';" href="#divPopUpSignContract" data-rel="popup">
+                                Sign
+                              </A>
+                              <A class="rnr-button button savehidden" id="Save_sign141" href="#" typeid="ib">
+                                Save_sign14
+                              </A>
+                              <A class="rnr-button button" id="X125" href="#" typeid="ib">
+                                X
+                              </A>
+                            </DIV>
+                          </DIV>
+                        </TD>
+                        <TD>
+                          <DIV id="dbsign15">
+                            {$sign_seller15_value}
+                          </DIV>
+                          <DIV id="buttons-container">
+                            <DIV id="signature15">
+                              <A class="rnr-button" onclick="window.signID = 'signature15';" href="#divPopUpSignContract" data-rel="popup">
+                                Sign
+                              </A>
+                              <A class="rnr-button button savehidden" id="Save_sign151" href="#" typeid="ib">
+                                Save_sign15
+                              </A>
+                              <A class="rnr-button button" id="X126" href="#" typeid="ib">
+                                X
+                              </A>
+                            </DIV>
+                          </DIV>
+                        </TD>
+                        <TD>
+                          <DIV id="dbsign16">
+                            {$sign_seller16_value}
+                          </DIV>
+                          <DIV id="buttons-container">
+                            <DIV id="signature16">
+                              <A class="rnr-button" onclick="window.signID = 'signature16';" href="#divPopUpSignContract" data-rel="popup">
+                                Sign
+                              </A>
+                              <A class="rnr-button button savehidden" id="Save_sign161" href="#" typeid="ib">
+                                Save_sign16
+                              </A>
+                              <A class="rnr-button button" id="X127" href="#" typeid="ib">
+                                X
+                              </A>
+                            </DIV>
+                          </DIV>
+                        </TD>
+                      </TR>
+                    </TBODY>
+                  </TABLE>
+                </TD>
+              </TR>
+              <TR>
+                <TD rowspan="1" colspan="4">
+                  <DIV class="form-name">
+                    {$form_name_value}
+                  </DIV>
+                </TD>
+              </TR>
+              <TR>
+                <TD rowspan="1" colspan="4">
+                  <DIV align="center">
+                    <FONT size="2">Page 4 of 7</FONT>
+                  </DIV>
+                </TD>
+              </TR>
+            </TBODY>
+          </TABLE>
+        </DIV>
+        </page>
+        <page size="A4">
+        <DIV align="center" style="font-family: Times New Roman; font-size: 13pt;">
+          <TABLE bordercolor="" style="width: 185mm; height: 297mm;" bgcolor="" border="0" 
+rules="" cellspacing="2" cellpadding="10">
+            <TBODY>
+              <TR>
+                <TD style="height: 50px; white-space: nowrap;" rowspan="1" 
+  colspan="4">
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 100%; white-space: normal;" rowspan="1" colspan="4">
+                  Signed by the Seller(s) and the Estate Agent
+                </TD>
+              </TR>
+              <TR>
+                <TD rowspan="1" colspan="4">
+                  &nbsp;
+                </TD>
+              </TR>
+              <TR>
+                <TD rowspan="1" colspan="4">
+                  Note:&nbsp;&nbsp;The parties are to initial every page of this Agreement including the Schedules and any attachments.
+                </TD>
+              </TR>
+              <TR>
+                <TD rowspan="1" colspan="4">
+                  &nbsp;
+                </TD>
+              </TR>
+              <TR>
+                <TD valign="bottom" rowspan="1" colspan="1">
+                  <DIV id="dbsign17">
+                    {$sign_seller17_value}
+                  </DIV>
+                </TD>
+                <TD valign="bottom" rowspan="1" colspan="1">
+                  <DIV id="buttons-container">
+                    <DIV id="signature17">
+                      <A class="rnr-button" onclick="window.signID = 'signature17';" href="#divPopUpSignContract" data-rel="popup">
+                        Sign
+                      </A>
+                      <A class="rnr-button button savehidden" id="Save_sign171" href="#" typeid="ib">
+                        Save_sign17
+                      </A>
+                      <A class="rnr-button button" id="X128" href="#" typeid="ib">
+                        &nbsp;X&nbsp;
+                      </A>
+                    </DIV>
+                  </DIV>
+                </TD>
+                <TD valign="bottom" style="width: 150px; white-space: normal;" rowspan="1" 
+    colspan="1">
+                  <DIV id="dbsign_interpreter1">
+                    {$sign_interpreter1_value}
+                  </DIV>
+                </TD>
+                {BEGIN interpret1_fieldblock}
+                  <TD valign="bottom" rowspan="1" colspan="1">
+                    <DIV id="buttons-container">
+                      <DIV id="signature_interpreter1">
+                        <A class="rnr-button" onclick="window.signID = 'signature_interpreter1';" href="#divPopUpSignContract" data-rel="popup">
+                          Sign
+                        </A>
+                        <A class="rnr-button button savehidden" id="Save_sign_interpreter1" href="#" typeid="ib">
+                          Save_sign_interpreter1
+                        </A>
+                        <A class="rnr-button button" id="X133" href="#" typeid="ib">
+                          X
+                        </A>
+                      </DIV>
+                    </DIV>
+                  </TD>
+                {END interpret1_fieldblock}
+              </TR>
+              <TR>
+                <TD style="width: 130px; white-space: normal;" rowspan="1" colspan="1">
+                  Signed by Seller (1)&nbsp;
+                </TD>
+                <TD class="runner-cc" rowspan="1" colspan="1">
+                </TD>
+                {BEGIN interpret1_fieldblock}
+                  <TD style="width: 150px; white-space: normal;" rowspan="1" colspan="1">
+                    Signed by interpreter:&nbsp;
+                  </TD>
+                {END interpret1_fieldblock}
+                {BEGIN interpret1_fieldblock}
+                  <TD class="runner-cc" rowspan="1" colspan="1">
+                  </TD>
+                {END interpret1_fieldblock}
+              </TR>
+              <TR>
+                {BEGIN interpret1_fieldblock}
+                  <TD style="white-space: nowrap;" rowspan="1" colspan="2">
+                    <U>{$interpretation1_value}</U>&nbsp;<U>{$interpret1_value}&nbsp;</U>&nbsp;
+                  </TD>
+                {END interpret1_fieldblock}
+                {BEGIN interpret1_fieldblock}
+                  <TD style="white-space: nowrap;" rowspan="1" colspan="2">
+                    Interpreter’s NRIC No.
+                    <SUP>
+                      (3)
+                    </SUP>
+                    :&nbsp;<U>{$interpreterID1_value}</U>
+                  </TD>
+                {END interpret1_fieldblock}
+              </TR>
+              <TR>
+                <TD style="white-space: normal;" rowspan="1" colspan="1">
+                  Date:&nbsp;
+                  <SPAN 
+      id="sign_date1">
+                    <U>{$sign_date1_value}</U>
+                  </SPAN>
+                </TD>
+                <TD rowspan="1" colspan="1">
+                  &nbsp;
+                </TD>
+                {BEGIN interpret1_fieldblock}
+                  <TD rowspan="1" colspan="1">
+                    Date:&nbsp;
+                    <SPAN id="interpretdate1">
+                      <U>{$interpretdate1_value}</U>
+                    </SPAN>
+                  </TD>
+                {END interpret1_fieldblock}
+                {BEGIN interpret1_fieldblock}
+                  <TD rowspan="1" colspan="1">
+                    &nbsp;
+                  </TD>
+                {END interpret1_fieldblock}
+              </TR>
+              <TR>
+                <TD style="white-space: normal;" rowspan="1" colspan="4">
+                  &nbsp;
+                </TD>
+              </TR>
+              <TR>
+                <TD valign="bottom" style="white-space: normal;" rowspan="1" colspan="1">
+                  <DIV id="dbsign18">
+                    {$sign_seller18_value}
+                  </DIV>
+                </TD>
+                <TD valign="bottom" rowspan="1" colspan="1">
+                  <DIV id="buttons-container">
+                    <DIV id="signature18">
+                      <A class="rnr-button" onclick="window.signID = 'signature18';" href="#divPopUpSignContract" data-rel="popup">
+                        Sign
+                      </A>
+                      <A class="rnr-button button savehidden" id="Save_sign18" href="#" typeid="ib">
+                        Save_sign18
+                      </A>
+                      <A class="rnr-button button" id="X129" href="#" typeid="ib">
+                        X
+                      </A>
+                    </DIV>
+                  </DIV>
+                </TD>
+                {BEGIN interpret2_fieldblock}
+                  <TD valign="bottom" rowspan="1" colspan="1">
+                    <DIV id="dbsign_interpreter2">
+                      {$sign_interpreter2_value}
+                    </DIV>
+                  </TD>
+                {END interpret2_fieldblock}
+                {BEGIN interpret2_fieldblock}
+                  <TD valign="bottom" rowspan="1" colspan="1">
+                    <DIV id="buttons-container">
+                      <DIV id="signature_interpreter2">
+                        <A class="rnr-button" onclick="window.signID = 'signature_interpreter2';" href="#divPopUpSignContract" data-rel="popup">
+                          Sign
+                        </A>
+                        <A class="rnr-button button savehidden" id="Save_sign_interpreter2" href="#" typeid="ib">
+                          Save_sign_interpreter2
+                        </A>
+                        <A class="rnr-button button" id="X134" href="#" typeid="ib">
+                          X
+                        </A>
+                      </DIV>
+                    </DIV>
+                  </TD>
+                {END interpret2_fieldblock}
+              </TR>
+              <TR>
+                <TD style="white-space: normal;" rowspan="1" colspan="1">
+                  Signed by Seller (2)&nbsp;
+                </TD>
+                <TD class="runner-cc" rowspan="1" colspan="1">
+                </TD>
+                {BEGIN interpret2_fieldblock}
+                  <TD rowspan="1" colspan="1">
+                    Signed by interpreter:&nbsp;
+                  </TD>
+                {END interpret2_fieldblock}
+                {BEGIN interpret2_fieldblock}
+                  <TD class="runner-cc" rowspan="1" colspan="1">
+                  </TD>
+                {END interpret2_fieldblock}
+              </TR>
+              <TR>
+                {BEGIN interpret2_fieldblock}
+                  <TD style="white-space: nowrap;" rowspan="1" colspan="2">
+                    <U>{$interpretation2_value}</U>&nbsp;<U>{$interpret2_value}&nbsp;</U>
+                  </TD>
+                {END interpret2_fieldblock}
+                {BEGIN interpret2_fieldblock}
+                  <TD style="white-space: nowrap;" rowspan="1" colspan="2">
+                    Interpreter’s NRIC No.
+                    <SUP>
+                      (3)
+                    </SUP>
+                    :&nbsp;<U>{$interpreterID2_value}</U>
+                  </TD>
+                {END interpret2_fieldblock}
+              </TR>
+              <TR>
+                <TD style="white-space: normal;" rowspan="1" colspan="1">
+                  Date:&nbsp;
+                  <SPAN id="sign_date2">
+                    <U>{$sign_date2_value}</U>
+                  </SPAN>
+                </TD>
+                <TD rowspan="1" colspan="1">
+                  &nbsp;
+                </TD>
+                {BEGIN interpret2_fieldblock}
+                  <TD rowspan="1" colspan="1">
+                    Date:&nbsp;
+                    <SPAN id="interpretdate2">
+                      <U>{$interpretdate2_value}</U>
+                    </SPAN>
+                  </TD>
+                {END interpret2_fieldblock}
+                {BEGIN interpret2_fieldblock}
+                  <TD rowspan="1" colspan="1">
+                    &nbsp;
+                  </TD>
+                {END interpret2_fieldblock}
+              </TR>
+              <TR>
+                <TD style="white-space: normal;" rowspan="1" colspan="4">
+                  &nbsp;
+                </TD>
+              </TR>
+              <TR>
+                <TD valign="bottom" style="white-space: normal;" rowspan="1" colspan="1">
+                  <DIV id="dbsign19">
+                    {$sign_seller19_value}
+                  </DIV>
+                </TD>
+                <TD valign="bottom" rowspan="1" colspan="1">
+                  <DIV id="buttons-container">
+                    <DIV id="signature19">
+                      <A class="rnr-button" onclick="window.signID = 'signature19';" href="#divPopUpSignContract" data-rel="popup">
+                        Sign
+                      </A>
+                      <A class="rnr-button button savehidden" id="Save_sign19" href="#" typeid="ib">
+                        Save_sign19
+                      </A>
+                      <A class="rnr-button button" id="X130" href="#" typeid="ib">
+                        X
+                      </A>
+                    </DIV>
+                  </DIV>
+                </TD>
+                {BEGIN interpret3_fieldblock}
+                  <TD valign="bottom" rowspan="1" colspan="1">
+                    <DIV id="dbsign_interpreter3">
+                      {$sign_interpreter3_value}
+                    </DIV>
+                  </TD>
+                {END interpret3_fieldblock}
+                {BEGIN interpret3_fieldblock}
+                  <TD valign="bottom" rowspan="1" colspan="1">
+                    <DIV id="buttons-container">
+                      <DIV id="signature_interpreter3">
+                        <A class="rnr-button" onclick="window.signID = 'signature_interpreter3';" href="#divPopUpSignContract" data-rel="popup">
+                          Sign
+                        </A>
+                        <A class="rnr-button button savehidden" id="Save_sign_interpreter3" href="#" typeid="ib">
+                          Save_sign_interpreter3
+                        </A>
+                        <A class="rnr-button button" id="X135" href="#" typeid="ib">
+                          X
+                        </A>
+                      </DIV>
+                    </DIV>
+                  </TD>
+                {END interpret3_fieldblock}
+              </TR>
+              <TR>
+                <TD style="white-space: normal;" rowspan="1" colspan="1">
+                  Signed by Seller (3)&nbsp;
+                </TD>
+                <TD class="runner-cc" rowspan="1" colspan="1">
+                </TD>
+                {BEGIN interpret3_fieldblock}
+                  <TD rowspan="1" colspan="1">
+                    Signed by interpreter:&nbsp;
+                  </TD>
+                {END interpret3_fieldblock}
+                {BEGIN interpret3_fieldblock}
+                  <TD class="runner-cc" rowspan="1" colspan="1">
+                  </TD>
+                {END interpret3_fieldblock}
+              </TR>
+              <TR>
+                {BEGIN interpret3_fieldblock}
+                  <TD style="white-space: nowrap;" rowspan="1" colspan="2">
+                    <U>{$interpretation3_value}</U>&nbsp;<U>{$interpret3_value}&nbsp;</U>&nbsp;
+                  </TD>
+                {END interpret3_fieldblock}
+                {BEGIN interpret3_fieldblock}
+                  <TD style="white-space: nowrap;" rowspan="1" colspan="2">
+                    Interpreter’s NRIC No.
+                    <SUP>
+                      (3)
+                    </SUP>
+                    :&nbsp;<U>{$interpreterID3_value}</U>
+                  </TD>
+                {END interpret3_fieldblock}
+              </TR>
+              <TR>
+                <TD style="white-space: normal;" rowspan="1" colspan="1">
+                  Date:&nbsp;
+                  <SPAN id="sign_date3">
+                    <U>{$sign_date3_value}</U>
+                  </SPAN>
+                </TD>
+                <TD rowspan="1" colspan="1">
+                  &nbsp;
+                </TD>
+                {BEGIN interpret3_fieldblock}
+                  <TD rowspan="1" colspan="1">
+                    Date:&nbsp;
+                    <SPAN id="interpretdate3">
+                      <U>{$interpretdate3_value}</U>
+                    </SPAN>
+                  </TD>
+                {END interpret3_fieldblock}
+                {BEGIN interpret3_fieldblock}
+                  <TD rowspan="1" colspan="1">
+                    &nbsp;
+                  </TD>
+                {END interpret3_fieldblock}
+              </TR>
+              <TR>
+                <TD style="white-space: normal;" rowspan="1" colspan="4">
+                  &nbsp;
+                </TD>
+              </TR>
+              <TR>
+                <TD valign="bottom" style="white-space: normal;" rowspan="1" colspan="1">
+                  <DIV id="dbsign20">
+                    {$sign_seller20_value}
+                  </DIV>
+                </TD>
+                <TD valign="bottom" rowspan="1" colspan="1">
+                  <DIV id="buttons-container">
+                    <DIV id="signature20">
+                      <A class="rnr-button" onclick="window.signID = 'signature20';" href="#divPopUpSignContract" data-rel="popup">
+                        Sign
+                      </A>
+                      <A class="rnr-button button savehidden" id="Save_sign20" href="#" typeid="ib">
+                        Save_sign20
+                      </A>
+                      <A class="rnr-button button" id="X131" href="#" typeid="ib">
+                        X
+                      </A>
+                    </DIV>
+                  </DIV>
+                </TD>
+                {BEGIN interpret4_fieldblock}
+                  <TD valign="bottom" rowspan="1" colspan="1">
+                    <DIV id="dbsign_interpreter4">
+                      {$sign_interpreter4_value}
+                    </DIV>
+                  </TD>
+                {END interpret4_fieldblock}
+                {BEGIN interpret4_fieldblock}
+                  <TD valign="bottom" rowspan="1" colspan="1">
+                    <DIV id="buttons-container">
+                      <DIV id="signature_interpreter4">
+                        <A class="rnr-button" onclick="window.signID = 'signature_interpreter4';" href="#divPopUpSignContract" data-rel="popup">
+                          Sign
+                        </A>
+                        <A class="rnr-button button savehidden" id="Save_sign_interpreter4" href="#" typeid="ib">
+                          Save_sign_interpreter4
+                        </A>
+                        <A class="rnr-button button" id="X136" href="#" typeid="ib">
+                          X
+                        </A>
+                      </DIV>
+                    </DIV>
+                  </TD>
+                {END interpret4_fieldblock}
+              </TR>
+              <TR>
+                <TD style="white-space: normal;" rowspan="1" colspan="1">
+                  Signed by Seller (4)&nbsp;
+                </TD>
+                <TD class="runner-cc" rowspan="1" colspan="1">
+                </TD>
+                {BEGIN interpret4_fieldblock}
+                  <TD rowspan="1" colspan="1">
+                    Signed by interpreter:&nbsp;
+                  </TD>
+                {END interpret4_fieldblock}
+                {BEGIN interpret4_fieldblock}
+                  <TD class="runner-cc" rowspan="1" colspan="1">
+                  </TD>
+                {END interpret4_fieldblock}
+              </TR>
+              <TR>
+                {BEGIN interpret4_fieldblock}
+                  <TD style="white-space: nowrap;" rowspan="1" colspan="2">
+                    <U>{$interpretation4_value}</U>&nbsp;<U>{$interpret4_value}&nbsp;</U>&nbsp;
+                  </TD>
+                {END interpret4_fieldblock}
+                {BEGIN interpret4_fieldblock}
+                  <TD style="white-space: nowrap;" rowspan="1" colspan="2">
+                    Interpreter’s NRIC No.
+                    <SUP>
+                      (3)
+                    </SUP>
+                    :&nbsp;<U>{$interpreterID4_value}</U>
+                  </TD>
+                {END interpret4_fieldblock}
+              </TR>
+              <TR>
+                <TD style="white-space: normal;" rowspan="1" colspan="1">
+                  Date:&nbsp;
+                  <SPAN id="sign_date4">
+                    <U>{$sign_date4_value}</U>
+                  </SPAN>
+                </TD>
+                <TD rowspan="1" colspan="1">
+                  &nbsp;
+                </TD>
+                {BEGIN interpret4_fieldblock}
+                  <TD rowspan="1" colspan="1">
+                    Date:&nbsp;
+                    <SPAN id="interpretdate4">
+                      <U>{$interpretdate4_value}</U>
+                    </SPAN>
+                  </TD>
+                {END interpret4_fieldblock}
+                {BEGIN interpret4_fieldblock}
+                  <TD rowspan="1" colspan="1">
+                    &nbsp;
+                  </TD>
+                {END interpret4_fieldblock}
+              </TR>
+              <TR>
+                <TD style="white-space: normal;" rowspan="1" colspan="4">
+                  &nbsp;
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 110px; white-space: normal;" rowspan="1" colspan="1">
+                  Signed by&nbsp;
+                  <SUP>
+                    (12)
+                  </SUP>
+                </TD>
+                <TD class="runner-cc" rowspan="1" colspan="1">
+                </TD>
+                <TD rowspan="1" colspan="1">
+                </TD>
+                <TD class="runner-cc" rowspan="1" colspan="1">
+                </TD>
+              </TR>
+              {BEGIN agency_or_salesperson_fieldblock}
+                <TR>
+                  <TD style="white-space: normal;" rowspan="1" colspan="2">
+                    <U>{$agency_or_salesperson_value}&nbsp;</U>&nbsp;
+                  </TD>
+                  <TD rowspan="1" colspan="1">
+                  </TD>
+                  <TD class="runner-cc" rowspan="1" colspan="1">
+                  </TD>
+                </TR>
+              {END agency_or_salesperson_fieldblock}
+              {BEGIN salesperson_fieldblock}
+                <TR data-fieldname="salesperson">
+                  <TD style="white-space: normal;" rowspan="1" 
+    colspan="2">
+                    Name of Salesperson:&nbsp;<U>{$salesperson_value}&nbsp;</U>&nbsp;
+                  </TD>
+                  <TD rowspan="1" colspan="1">
+                  </TD>
+                  <TD class="runner-cc" rowspan="1" colspan="1">
+                  </TD>
+                </TR>
+              {END salesperson_fieldblock}
+              {BEGIN estateagent2_fieldblock}
+                <TR data-fieldname="estateagent2">
+                  <TD style="white-space: normal;" rowspan="1" colspan="2">
+                    Name of Estate Agent:&nbsp;<U>{$estateagent2_value}&nbsp;</U>&nbsp;
+                  </TD>
+                  <TD rowspan="1" colspan="1">
+                  </TD>
+                  <TD class="runner-cc" rowspan="1" colspan="1">
+                  </TD>
+                </TR>
+              {END estateagent2_fieldblock}
+              {BEGIN salesperson_ic_fieldblock}
+                <TR data-fieldname="salesperson_ic">
+                  <TD style="white-space: normal;" rowspan="1" colspan="2">
+                    NRIC No.
+                    <SUP>
+                      (3)
+                    </SUP>
+                    :&nbsp;<U>{$salesperson_ic_value}&nbsp;</U>
+                  </TD>
+                  <TD rowspan="1" colspan="1">
+                  </TD>
+                  <TD class="runner-cc" rowspan="1" colspan="1">
+                  </TD>
+                </TR>
+              {END salesperson_ic_fieldblock}
+              {BEGIN salesperson_address_fieldblock}
+                <TR data-fieldname="salesperson_address">
+                  <TD style="white-space: normal;" rowspan="1" colspan="3">
+                    Address:&nbsp;<U>{$salesperson_address_value}&nbsp;</U>&nbsp;<U>{$salesperson_postcode_value}</U>
+                  </TD>
+                  <TD class="runner-cc" rowspan="1" colspan="1">
+                  </TD>
+                </TR>
+              {END salesperson_address_fieldblock}
+              {BEGIN salesperson_cea_fieldblock}
+                <TR data-fieldname="salesperson_cea">
+                  <TD style="white-space: normal;" rowspan="1" colspan="2">
+                    Salesperson Registration No.:&nbsp;<U>{$salesperson_cea_value}&nbsp;</U>
+                  </TD>
+                  <TD rowspan="1" colspan="1">
+                  </TD>
+                  <TD class="runner-cc" rowspan="1" colspan="1">
+                  </TD>
+                </TR>
+              {END salesperson_cea_fieldblock}
+              {BEGIN estateagent_cea2_fieldblock}
+                <TR data-fieldname="estateagent_cea2">
+                  <TD style="white-space: normal;" rowspan="1" colspan="2">
+                    Estate Agent Licence No.:&nbsp;<U>{$estateagent_cea2_value}&nbsp;</U>
+                  </TD>
+                  <TD rowspan="1" colspan="1">
+                  </TD>
+                  <TD class="runner-cc" rowspan="1" colspan="1">
+                  </TD>
+                </TR>
+              {END estateagent_cea2_fieldblock}
+              {BEGIN salesperson_contact_fieldblock}
+                <TR data-fieldname="salesperson_contact">
+                  <TD style="white-space: normal;" rowspan="1" colspan="2">
+                    Tel:&nbsp;<U>{$salesperson_contact_value}&nbsp;</U>
+                  </TD>
+                  <TD rowspan="1" colspan="1">
+                  </TD>
+                  <TD class="runner-cc" rowspan="1" colspan="1">
+                  </TD>
+                </TR>
+              {END salesperson_contact_fieldblock}
+              {BEGIN estateagent_tel_fieldblock}
+                <TR data-fieldname="estateagent_tel">
+                  <TD style="white-space: normal;" rowspan="1" colspan="2">
+                    Tel:&nbsp;<U>{$estateagent_tel_value}&nbsp;</U>
+                  </TD>
+                  <TD rowspan="1" colspan="1">
+                  </TD>
+                  <TD class="runner-cc" rowspan="1" colspan="1">
+                  </TD>
+                </TR>
+              {END estateagent_tel_fieldblock}
+              <TR>
+                <TD rowspan="1" colspan="1">
+                  <DIV id="dbsign_agent">
+                    {$sign_agent_value}
+                  </DIV>
+                </TD>
+                <TD class="runner-cc" rowspan="1" colspan="1">
+                  <DIV id="buttons-container">
+                    <DIV id="signature_agent">
+                      <A class="rnr-button" onclick="window.signID = 'signature_agent';" href="#divPopUpSignContract" data-rel="popup">
+                        Sign
+                      </A>
+                      <A class="rnr-button button savehidden" id="Save_sign_agent1" href="#" typeid="ib">
+                        Save_sign_agent
+                      </A>
+                      <A class="rnr-button button" id="X132" href="#" typeid="ib">
+                        X
+                      </A>
+                    </DIV>
+                  </DIV>
+                </TD>
+                <TD rowspan="1" colspan="1">
+                </TD>
+                <TD class="runner-cc" rowspan="1" colspan="1">
+                </TD>
+              </TR>
+              <TR>
+                <TD style="white-space: normal;" rowspan="1" colspan="1">
+                  Date:&nbsp;
+                  <SPAN id="date_sign">
+                    <U>{$date_sign_value}</U>
+                  </SPAN>
+                </TD>
+                <TD rowspan="1" colspan="1">
+                </TD>
+                <TD rowspan="1" colspan="1">
+                </TD>
+                <TD class="runner-cc" rowspan="1" colspan="1">
+                </TD>
+              </TR>
+              <TR>
+                <TD style="height: 50px; white-space: nowrap;" rowspan="1" colspan="4">
+                  &nbsp;
+                </TD>
+              </TR>
+              <TR>
+                <TD style="white-space: normal;" rowspan="1" colspan="4">
+                  <P align="justify">
+                    <U>Note</U>:&nbsp; The Estate Agent must provide the original or a copy of this Agreement to the Seller immediately upon signing.
+                  </P>
+                </TD>
+              </TR>
+              <TR>
+                <TD style="height: 230px; white-space: normal;" rowspan="1" 
+  colspan="4">
+                </TD>
+              </TR>
+              <TR>
+                <TD rowspan="1" colspan="4">
+                  <DIV class="form-name">
+                    {$form_name_value}
+                  </DIV>
+                </TD>
+              </TR>
+              <TR>
+                <TD rowspan="1" colspan="4">
+                  <DIV align="center">
+                    <FONT size="2">Page 5 of 7</FONT>
+                  </DIV>
+                </TD>
+              </TR>
+            </TBODY>
+          </TABLE>
+        </DIV>
+        </page>
+        <page size="A4">
+        <DIV align="center" style="font-family: Times New Roman; font-size: 13pt;">
+          <TABLE bordercolor="" style="width: 185mm; height: 297mm;" bgcolor="" border="0" 
+rules="" cellspacing="0" cellpadding="0">
+            <TBODY>
+              <TR>
+                <TD style="padding: 20px 0px; text-align: center; font-size: 16pt; white-space: normal;" 
+    rowspan="1" colspan="2">
+                  <DIV>
+                    SCHEDULE 1
+                  </DIV>
+                  <DIV>
+                    EXPLANATORY NOTES
+                  </DIV>
+                </TD>
+              </TR>
+              <TR valign="top">
+                <TD style="width: 40px; white-space: normal;" rowspan="1" 
+      colspan="1">
+                  &nbsp;(1)
+                </TD>
+                <TD rowspan="1" colspan="1">
+                  <P align="justify">
+                    * means delete if not applicable. All deletions must be initialed by the Seller at the time they are made.
+                  </P>
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 40px; white-space: normal;" rowspan="1" colspan="2">
+                  &nbsp;
+                </TD>
+              </TR>
+              <TR valign="top">
+                <TD style="width: 40px; white-space: normal;" rowspan="1" colspan="1">
+                  &nbsp;(2)&nbsp;
+                </TD>
+                <TD rowspan="1" colspan="1">
+                  <P align="justify">
+                    This form of agreement is only applicable if all or part of the property to be sold comprises residential property in Singapore.
+                  </P>
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 40px; white-space: normal;" rowspan="1" colspan="2">
+                  &nbsp;
+                </TD>
+              </TR>
+              <TR valign="top">
+                <TD style="width: 40px; white-space: normal;" rowspan="1" colspan="1">
+                  &nbsp;(3)
+                </TD>
+                <TD rowspan="1" colspan="1">
+                  <P align="justify">
+                    If there is no NRIC No., please write another number such as FIN, passport or company incorporation / registration No., as the case may be.
+                  </P>
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 40px; white-space: normal;" rowspan="1" colspan="2">
+                  &nbsp;
+                </TD>
+              </TR>
+              <TR valign="top">
+                <TD style="width: 40px; white-space: normal;" rowspan="1" colspan="1">
+                  &nbsp;(4)
+                </TD>
+                <TD rowspan="1" colspan="1">
+                  To insert full name of the Estate Agent.
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 40px; white-space: normal;" rowspan="1" colspan="2">
+                  &nbsp;
+                </TD>
+              </TR>
+              <TR valign="top">
+                <TD style="width: 40px; white-space: normal;" rowspan="1" colspan="1">
+                  &nbsp;(5)
+                </TD>
+                <TD rowspan="1" colspan="1">
+                  <P align="justify">
+                    The Estate Agent is not an exclusive agent and the Seller may also sell the Property himself or through another agent.
+                  </P>
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 40px; white-space: normal;" rowspan="1" colspan="2">
+                  &nbsp;
+                </TD>
+              </TR>
+              <TR valign="top">
+                <TD style="width: 40px; white-space: normal;" rowspan="1" colspan="1">
+                  &nbsp;(6)
+                </TD>
+                <TD rowspan="1" colspan="1">
+                  Buyer includes a potential Buyer.
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 40px; white-space: normal;" rowspan="1" colspan="2">
+                  &nbsp;
+                </TD>
+              </TR>
+              <TR valign="top">
+                <TD style="width: 40px; white-space: normal;" rowspan="1" colspan="1">
+                  &nbsp;(7)
+                </TD>
+                <TD rowspan="1" colspan="1">
+                  <P align="justify">
+                    If there is more than one Property, the relevant addresses may be recorded on a separate sheet and attached to this Agreement. Alternatively, separate agreement may be used for each Property.
+                  </P>
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 40px; white-space: normal;" rowspan="1" colspan="2">
+                  &nbsp;
+                </TD>
+              </TR>
+              <TR valign="top">
+                <TD style="width: 40px; white-space: normal;" rowspan="1" colspan="1">
+                  &nbsp;(8)
+                </TD>
+                <TD rowspan="1" colspan="1">
+                  <P align="justify">
+                    An agreement for sale and purchase may take the form of an executed sale and purchase agreement or an option to purchase which has been exercised by the Buyer.
+                  </P>
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 40px; white-space: normal;" rowspan="1" colspan="2">
+                  &nbsp;
+                </TD>
+              </TR>
+              <TR valign="top">
+                <TD style="width: 40px; white-space: normal;" rowspan="1" colspan="1">
+                  &nbsp;(9)
+                </TD>
+                <TD rowspan="1" colspan="1">
+                  <P align="justify">
+                    The amount or rate of commission is negotiable between the Seller and the Estate Agent.
+                  </P>
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 40px; white-space: normal;" rowspan="1" colspan="2">
+                  &nbsp;
+                </TD>
+              </TR>
+              <TR valign="top">
+                <TD style="width: 40px; white-space: normal;" rowspan="1" colspan="1">
+                  &nbsp;(10)
+                </TD>
+                <TD rowspan="1" colspan="1">
+                  <P align="justify">
+                    The Code of Ethics and Professional Client Care prescribes the Estate Agent’s and Salesperson’s duty to disclose and avoid any potential or actual conflict of interest.
+                  </P>
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 40px; white-space: normal;" rowspan="1" colspan="2">
+                  &nbsp;
+                </TD>
+              </TR>
+              <TR valign="top">
+                <TD style="width: 40px; white-space: normal;" rowspan="1" colspan="1">
+                  &nbsp;(11)
+                </TD>
+                <TD rowspan="1" colspan="1">
+                  <P align="justify">
+                    Where the parties have made any choice above, they may subsequently vary such choice in writing but such variation must be dated and initialed by the parties. The parties may also vary the non-prescribed Additional Terms but such variation must be in writing, dated and initialed by the parties.
+                  </P>
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 40px; white-space: normal;" rowspan="1" colspan="2">
+                  &nbsp;
+                </TD>
+              </TR>
+              <TR valign="top">
+                <TD style="width: 40px; white-space: normal;" rowspan="1" colspan="1">
+                  &nbsp;(12)
+                </TD>
+                <TD rowspan="1" colspan="1">
+                  <P align="justify">
+                    If there is a Salesperson representing the Estate Agent in the proposed sale of the&nbsp;Property, the Salesperson shall sign and fill in his particulars. Otherwise, if the Estate Agent acting in the proposed sale of the Property is a natural person, he shall sign and fill in his particulars. If there is more than one such Salesperson or Estate Agent who is a natural person acting in the proposed sale of the Property, their name(s) and particular(s) shall also be written, if necessary, on a separate sheet and attached to this Agreement.
+                  </P>
+                </TD>
+              </TR>
+              <TR valign="top">
+                <TD style="width: 40px; height: 30px; white-space: normal;" rowspan="1" 
+    colspan="2">
+                  &nbsp;
+                </TD>
+              </TR>
+              <TR>
+                <TD style="padding-left: 20px;" rowspan="1" colspan="2">
+                  <TABLE width="100%" border="0" cellspacing="1" cellpadding="1">
+                    <TBODY>
+                      <TR>
+                        <TD>
+                          &nbsp;<EM><FONT size="2">Seller 1 initial:</FONT></EM>
+                        </TD>
+                        <TD>
+                          &nbsp;<EM><FONT size="2">Seller 2 initial:</FONT></EM>
+                        </TD>
+                        <TD>
+                          &nbsp;<EM><FONT size="2">Seller 3 initial:</FONT></EM>
+                        </TD>
+                        <TD>
+                          &nbsp;<EM><FONT size="2">Seller 4 initial:</FONT></EM>
+                        </TD>
+                      </TR>
+                      <TR>
+                        <TD>
+                          <DIV id="dbsign21">
+                            {$sign_seller21_value}
+                          </DIV>
+                          <DIV id="buttons-container">
+                            <DIV id="signature21">
+                              <A class="rnr-button" onclick="window.signID = 'signature21';" href="#divPopUpSignContract" data-rel="popup">
+                                Sign
+                              </A>
+                              <A class="rnr-button button savehidden" id="Save_sign211" href="#" typeid="ib">
+                                Save_sign21
+                              </A>
+                              <A class="rnr-button button" id="X137" href="#" typeid="ib">
+                                X
+                              </A>
+                            </DIV>
+                          </DIV>
+                        </TD>
+                        <TD>
+                          <DIV id="dbsign22">
+                            {$sign_seller22_value}
+                          </DIV>
+                          <DIV id="buttons-container">
+                            <DIV id="signature22">
+                              <A class="rnr-button" onclick="window.signID = 'signature22';" href="#divPopUpSignContract" data-rel="popup">
+                                Sign
+                              </A>
+                              <A class="rnr-button button savehidden" id="Save_sign221" href="#" typeid="ib">
+                                Save_sign22
+                              </A>
+                              <A class="rnr-button button" id="X138" href="#" typeid="ib">
+                                X
+                              </A>
+                            </DIV>
+                          </DIV>
+                        </TD>
+                        <TD>
+                          <DIV id="dbsign23">
+                            {$sign_seller23_value}
+                          </DIV>
+                          <DIV id="buttons-container">
+                            <DIV id="signature23">
+                              <A class="rnr-button" onclick="window.signID = 'signature23';" href="#divPopUpSignContract" data-rel="popup">
+                                Sign
+                              </A>
+                              <A class="rnr-button button savehidden" id="Save_sign231" href="#" typeid="ib">
+                                Save_sign23
+                              </A>
+                              <A class="rnr-button button" id="X139" href="#" typeid="ib">
+                                X
+                              </A>
+                            </DIV>
+                          </DIV>
+                        </TD>
+                        <TD>
+                          <DIV id="dbsign24">
+                            {$sign_seller24_value}
+                          </DIV>
+                          <DIV id="buttons-container">
+                            <DIV id="signature24">
+                              <A class="rnr-button" onclick="window.signID = 'signature24';" href="#divPopUpSignContract" data-rel="popup">
+                                Sign
+                              </A>
+                              <A class="rnr-button button savehidden" id="Save_sign241" href="#" typeid="ib">
+                                Save_sign24
+                              </A>
+                              <A class="rnr-button button" id="X140" href="#" typeid="ib">
+                                X
+                              </A>
+                            </DIV>
+                          </DIV>
+                        </TD>
+                      </TR>
+                    </TBODY>
+                  </TABLE>
+                </TD>
+              </TR>
+              <TR>
+                <TD rowspan="1" colspan="2">
+                  <DIV class="form-name">
+                    {$form_name_value}
+                  </DIV>
+                </TD>
+              </TR>
+              <TR>
+                <TD rowspan="1" colspan="2">
+                  <DIV align="center">
+                    <FONT size="2">Page 6 of 7</FONT>
+                  </DIV>
+                </TD>
+              </TR>
+            </TBODY>
+          </TABLE>
+        </DIV>
+        </page>
+        <page size="A4">
+        <DIV align="center" style="font-family: Times New Roman; font-size: 13pt;">
+          <TABLE bordercolor="" style="width: 185mm; height: 297mm;" bgcolor="" border="0" 
+rules="" cellspacing="2" cellpadding="10">
+            <TBODY>
+              <TR>
+                <TD style="height: 30px; white-space: normal;" rowspan="1" 
+  colspan="2">
+                </TD>
+              </TR>
+              <TR>
+                <TD style="padding: 30px 0px; text-align: center; font-size: 16pt; white-space: normal;" 
+    rowspan="1" colspan="2">
+                  <DIV>
+                    SCHEDULE 2
+                  </DIV>
+                  <DIV>
+                    DUTIES OF ESTATE AGENT
+                  </DIV>
+                </TD>
+              </TR>
+              <TR>
+                <TD style="height: 50px; white-space: normal;" rowspan="1" colspan="2">
+                  The Estate Agent shall:
+                </TD>
+              </TR>
+              <TR valign="top">
+                <TD style="width: 40px; white-space: normal;" rowspan="1" colspan="1">
+                  &nbsp;(a):
+                </TD>
+                <TD style="white-space: normal;" rowspan="1" colspan="1">
+                  <P align="justify">
+                    provide reasonable assistance and advice to the Seller throughout the process of sale of the Property.
+                  </P>
+                </TD>
+              </TR>
+              <TR>
+                <TD rowspan="1" colspan="2">
+                  &nbsp;
+                </TD>
+              </TR>
+              <TR valign="top">
+                <TD style="width: 40px; white-space: normal;" rowspan="1" colspan="1">
+                  &nbsp;(b):
+                </TD>
+                <TD rowspan="1" colspan="1">
+                  <P align="justify">
+                    represent the Seller in negotiations with any prospective Buyer in accordance with his instructions.
+                  </P>
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 40px; white-space: normal;" rowspan="1" colspan="2">
+                  &nbsp;
+                </TD>
+              </TR>
+              <TR valign="top">
+                <TD style="width: 40px; white-space: normal;" rowspan="1" colspan="1">
+                  &nbsp;(c):
+                </TD>
+                <TD rowspan="1" colspan="1">
+                  <P align="justify">
+                    promptly forward to the Seller all offers, proposals or expressions of interest from&nbsp;potential Buyers or their agents.
+                  </P>
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 40px; white-space: normal;" rowspan="1" colspan="2">
+                  &nbsp;
+                </TD>
+              </TR>
+              <TR valign="top">
+                <TD style="width: 40px; white-space: normal;" rowspan="1" colspan="1">
+                  &nbsp;(d):
+                </TD>
+                <TD rowspan="1" colspan="1">
+                  <P align="justify">
+                    advance the Seller’s interest unaffected by any interest of the Estate Agent, Salesperson or any other person.
+                  </P>
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 40px; white-space: normal;" rowspan="1" colspan="2">
+                  &nbsp;
+                </TD>
+              </TR>
+              <TR valign="top">
+                <TD style="width: 40px; white-space: normal;" rowspan="1" colspan="1">
+                  &nbsp;(e):
+                </TD>
+                <TD rowspan="1" colspan="1">
+                  <P align="justify">
+                    assist the Seller to enter into a binding agreement for sale and purchase with the Buyer and reasonably explain to the Seller all relevant forms and documents. However, if the Estate Agent is in doubt on any matter, he shall state his doubt and advise the Seller to seek advice from appropriate prefessionals.
+                  </P>
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 40px; white-space: normal;" rowspan="1" colspan="2">
+                  &nbsp;
+                </TD>
+              </TR>
+              <TR valign="top">
+                <TD style="width: 40px; white-space: normal;" rowspan="1" colspan="1">
+                  &nbsp;(f):
+                </TD>
+                <TD rowspan="1" colspan="1">
+                  <P align="justify">
+                    comply with all reasonable instructions and requests of the Seller in relation to the transaction.
+                  </P>
+                </TD>
+              </TR>
+              <TR>
+                <TD rowspan="1" colspan="2">
+                  &nbsp;
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 40px; white-space: normal;" rowspan="1" colspan="2">
+                  &nbsp;
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 40px; white-space: normal;" rowspan="1" 
+      colspan="2">
+                  <U><EM>Note:</EM>&nbsp;&nbsp;The following are also applicable in the case of HDB property</U>
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 40px; white-space: normal;" rowspan="1" colspan="1">
+                  &nbsp;
+                </TD>
+                <TD rowspan="1" colspan="1">
+                  &nbsp;
+                </TD>
+              </TR>
+              <TR valign="top">
+                <TD style="width: 40px; white-space: normal;" rowspan="1" colspan="1">
+                  &nbsp;(g):
+                </TD>
+                <TD rowspan="1" colspan="1">
+                  <P align="justify">
+                    advise the Seller on the eligibility of the Seller to sell his HDB flat.
+                  </P>
+                </TD>
+              </TR>
+              <TR>
+                <TD style="width: 40px; white-space: normal;" rowspan="1" colspan="2">
+                  &nbsp;
+                </TD>
+              </TR>
+              <TR valign="top">
+                <TD style="width: 40px; white-space: normal;" rowspan="1" colspan="1">
+                  &nbsp;(h):
+                </TD>
+                <TD rowspan="1" colspan="1">
+                  <P align="justify">
+                    explain and go through the resale checklist with the Seller of the HDB flat and check with the Seller on whether the renovations made were duly authorised.
+                  </P>
+                </TD>
+              </TR>
+              <TR>
+                <TD rowspan="1" colspan="2">
+                  &nbsp;
+                </TD>
+              </TR>
+              <TR valign="top">
+                <TD style="width: 40px; white-space: normal;" rowspan="1" colspan="1">
+                  &nbsp;(i):
+                </TD>
+                <TD style="white-space: normal;" rowspan="1" colspan="1">
+                  <P align="justify">
+                    assist the Seller of the HDB flat to submit such forms, documents and/or information as may be required by HDB to process the application for sale.
+                  </P>
+                </TD>
+              </TR>
+              <TR>
+                <TD style="height: 130px; white-space: normal;" rowspan="1" colspan="2">
+                  &nbsp;
+                </TD>
+              </TR>
+              <TR>
+                <TD style="padding-left: 20px;" rowspan="1" colspan="2">
+                  <TABLE width="100%" border="0" cellspacing="1" cellpadding="1">
+                    <TBODY>
+                      <TR>
+                        <TD>
+                          &nbsp;<EM><FONT size="2">Seller 1 initial:</FONT></EM>
+                        </TD>
+                        <TD>
+                          &nbsp;<EM><FONT size="2">Seller 2 initial:</FONT></EM>
+                        </TD>
+                        <TD>
+                          &nbsp;<EM><FONT size="2">Seller 3 initial:</FONT></EM>
+                        </TD>
+                        <TD>
+                          &nbsp;<EM><FONT size="2">Seller 4 initial:</FONT></EM>
+                        </TD>
+                      </TR>
+                      <TR>
+                        <TD>
+                          <DIV id="dbsign25">
+                            {$sign_seller25_value}
+                          </DIV>
+                          <DIV id="buttons-container">
+                            <DIV id="signature25">
+                              <A class="rnr-button" onclick="window.signID = 'signature25';" href="#divPopUpSignContract" data-rel="popup">
+                                Sign
+                              </A>
+                              <A class="rnr-button button savehidden" id="Save_sign251" href="#" typeid="ib">
+                                Save_sign25
+                              </A>
+                              <A class="rnr-button button" id="X11" href="#" typeid="ib">
+                                X
+                              </A>
+                            </DIV>
+                          </DIV>
+                        </TD>
+                        <TD>
+                          <DIV id="dbsign26">
+                            {$sign_seller26_value}
+                          </DIV>
+                          <DIV id="buttons-container">
+                            <DIV id="signature26">
+                              <A class="rnr-button" onclick="window.signID = 'signature26';" href="#divPopUpSignContract" data-rel="popup">
+                                Sign
+                              </A>
+                              <A class="rnr-button button savehidden" id="Save_sign261" href="#" typeid="ib">
+                                Save_sign26
+                              </A>
+                              <A class="rnr-button button" id="X141" href="#" typeid="ib">
+                                X
+                              </A>
+                            </DIV>
+                          </DIV>
+                        </TD>
+                        <TD>
+                          <DIV id="dbsign27">
+                            {$sign_seller27_value}
+                          </DIV>
+                          <DIV id="buttons-container">
+                            <DIV id="signature27">
+                              <A class="rnr-button" onclick="window.signID = 'signature27';" href="#divPopUpSignContract" data-rel="popup">
+                                Sign
+                              </A>
+                              <A class="rnr-button button savehidden" id="Save_sign271" href="#" typeid="ib">
+                                Save_sign27
+                              </A>
+                              <A class="rnr-button button" id="X142" href="#" typeid="ib">
+                                X
+                              </A>
+                            </DIV>
+                          </DIV>
+                        </TD>
+                        <TD>
+                          <DIV id="dbsign28">
+                            {$sign_seller28_value}
+                          </DIV>
+                          <DIV id="buttons-container">
+                            <DIV id="signature28">
+                              <A class="rnr-button" onclick="window.signID = 'signature28';" href="#divPopUpSignContract" data-rel="popup">
+                                Sign
+                              </A>
+                              <A class="rnr-button button savehidden" id="Save_sign28" href="#" typeid="ib">
+                                Save_sign28
+                              </A>
+                              <A class="rnr-button button" id="X143" href="#" typeid="ib">
+                                X
+                              </A>
+                            </DIV>
+                          </DIV>
+                        </TD>
+                      </TR>
+                    </TBODY>
+                  </TABLE>
+                </TD>
+              </TR>
+              <TR>
+                <TD rowspan="1" colspan="2">
+                  <DIV class="form-name">
+                    {$form_name_value}
+                  </DIV>
+                </TD>
+              </TR>
+              <TR>
+                <TD rowspan="1" colspan="2">
+                  <DIV align="center">
+                    <FONT size="2">Page 7 of 7</FONT>
+                  </DIV>
+                </TD>
+              </TR>
+            </TBODY>
+          </TABLE>
+        </DIV>
+        </page>
+        {BEGIN buttons-container}
+          <DIV align="center" style="padding: 3px;">
+            <DIV id="buttons-container">
+              <DIV id="top-buttons">
+                {BEGIN back_button}
+                  <A class="rnr-button" onclick="window.location.href='form1_list.php?a=return'" href="#" {$backbutton_attrs}>
+                    Back
+                  </A>
+                {END back_button}
+                <A class="rnr-button button" id="Edit1" href="#" typeid="ib">
+                  Edit
+                </A>
+                {BEGIN edit_button}
+                  <A class="rnr-button" style="display: none;" onclick="if (confirm('WARNING! To edit record all signatures in this Form will be cleared. To proceed click OK, or Cancel to abort action.')){return true;}else{return false;}" href="form1_edit.php?editid1={$editid1_value}">
+                    Edit
+                  </A>
+                {END edit_button}
+                <A class="rnr-button" id="print" onclick="window.print(); return false;" href="#">
+                  Print
+                </A>
+              </DIV>
+            </DIV>
+          </DIV>
+        {END buttons-container}
+        <DIV id="divPopUpSignContract" data-role="popup">
+          <DIV data-role="header" data-theme="b">
+            <A class="ui-btn-right closePopup" data-role="button" data-rel="back" data-transition="slide">
+              Close&nbsp;
+            </A>
+            <P class="popupHeader">
+              Signature Pad
+            </P>
+          </DIV>
+          <DIV class="ui-content popUpHeight">
+            <DIV id="div_signcontract">
+              <CANVAS class="canvas" id="canvas">
+              Canvas is not supported&nbsp;</CANVAS>
+              <DIV>
+                <INPUT id="btnSubmitSign" onclick="fun_submit()" type="button" value="Save" data-theme="b" data-mini="true" data-inline="true">
+                <INPUT id="btnClearSign" onclick="init_Sign_Canvas()" type="button" value="Clear" data-theme="b" data-mini="true" data-inline="true">
+              </DIV>
+            </DIV>
+          </DIV>
+        </DIV>
+      </DIV>
+      <!-- Return to Top -->
+      <A id="return-to-top" href="javascript:">
+        <I class="icon-chevron-up">
+        </I>
+      </A>
+      <!-- ICON NEEDS FONT AWESOME FOR CHEVRON UP ICON -->
+      <LINK href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" 
+rel="stylesheet">
+    {END body}
+  </BODY>
+</HTML>

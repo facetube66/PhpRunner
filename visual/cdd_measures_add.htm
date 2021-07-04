@@ -1,0 +1,796 @@
+<!doctype html>
+<html  {$html_attrs}>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      {$pagetitle}
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <base href="{$projectPath}">
+    <link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+    {BEGIN rtlCSS}
+      <link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+    {END rtlCSS}
+    {BEGIN styleCSSFiles}
+      <link REL="stylesheet" href="{$stylepath}" type="text/css">
+    {END styleCSSFiles}
+  </head>
+  <BODY class="{$stylename} function-add" {$bodyattrs}>
+    {BEGIN body}
+      {$header}
+      <style>
+        {$containerCss}
+      </style>
+      {$locking}
+      <DIV class="r-small-page" data-body-align="left" data-body-width="standard">
+        {BEGIN top_block}
+          <DIV class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}">
+            <DIV class="row">
+              <DIV data-cellId="top_c1" data-pageid="{$pageid}" {$cell_top_c1} class="col-md-12">
+                <h2 data-itemtype="add_header" data-itemid="add_header" {$item_add_header} data-pageid="{$pageid}" >
+                  {$pagetitlelabel cdd_measures add}
+                </h2>
+                {BEGIN cancel_button}
+                  <span data-itemtype="add_cancel" data-itemid="add_cancel1" {$item_add_cancel1} data-pageid="{$pageid}" data-small data-button-item>
+                    <A type="button" title class="btn btn-default" id="cancelButton{$id}">
+                      Cancel
+                    </a>
+                  </span>
+                {END cancel_button}
+              </div>
+            </div>
+          </div>
+        {END top_block}
+        {BEGIN above-grid_block}
+          <DIV class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}">
+            <DIV class="row">
+              <DIV data-cellId="above-grid_c1" data-pageid="{$pageid}" {$cell_above-grid_c1} class="r-ori-vert col-md-12">
+                {BEGIN firstAboveGridCell}
+                  {BEGIN message_block}
+                    <DIV data-itemtype="add_message" data-itemid="add_message" {$item_add_message} data-pageid="{$pageid}" class="alert {$message_class}" role="alert">
+                      <h5>
+                        {$message}
+                      </h5>
+                      <div>
+                        {BEGIN back_button}
+                          <BUTTON class="btn btn-sm btn-default" {$backbutton_attrs}>
+                            Back to list
+                          </button>
+                        {END back_button}
+                        {BEGIN view_page_button}
+                          <BUTTON class="btn btn-sm btn-default" {$view_page_button_attrs}>
+                            View
+                          </button>
+                        {END view_page_button}
+                        {BEGIN edit_page_button}
+                          <BUTTON class="btn btn-sm btn-default" {$edit_page_button_attrs}>
+                            Edit
+                          </button>
+                        {END edit_page_button}
+                      </div>
+                    </div>
+                  {END message_block}
+                {END firstAboveGridCell}
+              </div>
+            </div>
+          </div>
+        {END above-grid_block}
+        {BEGIN grid_block}
+          <TABLE data-body-align="left" data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" class="r-edit-form" cellpadding="0" cellspacing="0" {$grid_hiddenattr} data-form-width="1" data-v-width="4">
+            <tbody>
+              <tr {$row_grid_0} >
+                {BEGIN cellblock_grid_c3}
+                  <TD {$cell_grid_c3} class="r-ori-vert" data-fullwidth data-cellId="grid_c3" data-pageid="{$pageid}" data-page="cdd_measures_add" data-v-cell="4">
+                    <DIV edit-form-cell class="clearfix">
+                      {BEGIN id_cddmeasures_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_id_cddmeasures} r-vertical-field" data-signal-error-for="id_cddmeasures{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="id_cddmeasures" data-fieldname="id_cddmeasures">
+                          <LABEL class="r-edit-label control-label" for="{$labelfor_id_cddmeasures}">
+                            {BEGIN id_cddmeasures_label}
+                              {$label cdd_measures id_cddmeasures}
+                            {END id_cddmeasures_label}
+                          </label>
+                          <DIV class="r-edit-field">
+                            {$id_cddmeasures_editcontrol}
+                          </div>
+                          <DIV class="r-edit-tooltip" data-helpfor="id_cddmeasures">
+                            <DIV class="text-muted">
+                              {$tooltip cdd_measures id_cddmeasures}
+                            </div>
+                          </div>
+                        </div>
+                      {END id_cddmeasures_fieldblock}
+                      {BEGIN representing_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_representing} r-vertical-field" data-signal-error-for="representing{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field31" {$item_integrated_edit_field31} data-pageid="{$pageid}" data-field="representing" data-fieldname="representing">
+                          <LABEL class="r-edit-label control-label" for="{$labelfor_representing}">
+                            {BEGIN representing_label}
+                              {$label cdd_measures representing}
+                            {END representing_label}
+                          </label>
+                          <DIV class="r-edit-field">
+                            {$representing_editcontrol}
+                          </div>
+                          <DIV class="r-edit-tooltip" data-helpfor="representing">
+                            <DIV class="text-muted">
+                              {$tooltip cdd_measures representing}
+                            </div>
+                          </div>
+                        </div>
+                      {END representing_fieldblock}
+                      {BEGIN cdd_measure_customer_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_cdd_measure_customer} r-vertical-field" data-signal-error-for="cdd_measure_customer{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field28" {$item_integrated_edit_field28} data-pageid="{$pageid}" data-field="cdd_measure_customer" data-fieldname="cdd_measure_customer">
+                          <LABEL class="r-edit-label control-label" for="{$labelfor_cdd_measure_customer}">
+                            {BEGIN cdd_measure_customer_label}
+                              {$label cdd_measures cdd_measure_customer}
+                            {END cdd_measure_customer_label}
+                          </label>
+                          <DIV class="r-edit-field">
+                            {$cdd_measure_customer_editcontrol}
+                          </div>
+                          <DIV class="r-edit-tooltip" data-helpfor="cdd_measure_customer">
+                            <DIV class="text-muted">
+                              {$tooltip cdd_measures cdd_measure_customer}
+                            </div>
+                          </div>
+                        </div>
+                      {END cdd_measure_customer_fieldblock}
+                      {BEGIN customer_nric_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_customer_nric} r-vertical-field" data-signal-error-for="customer_nric{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field32" {$item_integrated_edit_field32} data-pageid="{$pageid}" data-field="customer_nric" data-fieldname="customer_nric">
+                          <LABEL class="r-edit-label control-label" for="{$labelfor_customer_nric}">
+                            {BEGIN customer_nric_label}
+                              {$label cdd_measures customer_nric}
+                            {END customer_nric_label}
+                          </label>
+                          <DIV class="r-edit-field">
+                            {$customer_nric_editcontrol}
+                          </div>
+                          <DIV class="r-edit-tooltip" data-helpfor="customer_nric">
+                            <DIV class="text-muted">
+                              {$tooltip cdd_measures customer_nric}
+                            </div>
+                          </div>
+                        </div>
+                      {END customer_nric_fieldblock}
+                      {BEGIN checked_by_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_checked_by} r-vertical-field" data-signal-error-for="checked_by{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field29" {$item_integrated_edit_field29} data-pageid="{$pageid}" data-field="checked_by" data-fieldname="checked_by">
+                          <LABEL class="r-edit-label control-label" for="{$labelfor_checked_by}">
+                            {BEGIN checked_by_label}
+                              {$label cdd_measures checked_by}
+                            {END checked_by_label}
+                          </label>
+                          <DIV class="r-edit-field">
+                            {$checked_by_editcontrol}
+                          </div>
+                          <DIV class="r-edit-tooltip" data-helpfor="checked_by">
+                            <DIV class="text-muted">
+                              {$tooltip cdd_measures checked_by}
+                            </div>
+                          </div>
+                        </div>
+                      {END checked_by_fieldblock}
+                      {BEGIN checked_date_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_checked_date} r-vertical-field" data-signal-error-for="checked_date{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field30" {$item_integrated_edit_field30} data-pageid="{$pageid}" data-field="checked_date" data-fieldname="checked_date">
+                          <LABEL class="r-edit-label control-label" for="{$labelfor_checked_date}">
+                            {BEGIN checked_date_label}
+                              {$label cdd_measures checked_date}
+                            {END checked_date_label}
+                          </label>
+                          <DIV class="r-edit-field">
+                            {$checked_date_editcontrol}
+                          </div>
+                          <DIV class="r-edit-tooltip" data-helpfor="checked_date">
+                            <DIV class="text-muted">
+                              {$tooltip cdd_measures checked_date}
+                            </div>
+                          </div>
+                        </div>
+                      {END checked_date_fieldblock}
+                  </td>
+                {END cellblock_grid_c3}
+              </tr>
+              <tr {$row_grid_1} >
+                {BEGIN cellblock_grid_c15}
+                  <TD {$cell_grid_c15} class="r-ori-vert" data-fullwidth data-cellId="grid_c15" data-pageid="{$pageid}" data-page="cdd_measures_add" data-v-cell="4">
+                    <DIV edit-form-cell class="clearfix">
+                      <span data-itemtype="text" data-itemid="text" {$item_text} data-pageid="{$pageid}" data-page="cdd_measures_add" data-small >
+                        1 Beneficial Owner (BO)
+                      </span>
+                      {BEGIN measure1_fieldblock}
+                        <DIV class="r-edit-label" data-signal-error-for="measure1{$id}" data-itemtype="edit_field_label" data-itemid="edit_field_label" {$item_edit_field_label} data-pageid="{$pageid}" data-field="measure1" data-fieldname="measure1" data-before-same-field>
+                          <LABEL class="r-edit-label control-label" for="{$labelfor_measure1}">
+                            {BEGIN measure1_label}
+                              {$label cdd_measures measure1}
+                            {END measure1_label}
+                          </label>
+                        </div>
+                      {END measure1_fieldblock}
+                      <span data-itemtype="text" data-itemid="text1" {$item_text1} data-pageid="{$pageid}" data-page="cdd_measures_add" data-small >
+                        * BO is the person who has ultimate interest in the property transaction, and who has control over the client. If the BO is a company, take reasonable measures to understand the ownership and control structure of the company to identify the individual behind the company.
+                      </span>
+                      <span data-itemtype="text" data-itemid="text2" {$item_text2} data-pageid="{$pageid}" data-page="cdd_measures_add" data-small >
+                        If your answer is “No” to the above question, please select “NA” for the following question.
+                      </span>
+                      {BEGIN measure1_fieldblock}
+                        <DIV class="r-edit-field" data-signal-error-for="measure1{$id}" data-itemtype="edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="measure1" data-fieldname="measure1">
+                          {$measure1_editcontrol}
+                        </div>
+                      {END measure1_fieldblock}
+                      {BEGIN remark1_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_remark1} r-vertical-field" data-signal-error-for="remark1{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field10" {$item_integrated_edit_field10} data-pageid="{$pageid}" data-field="remark1" data-fieldname="remark1">
+                          <LABEL class="r-edit-label control-label" for="{$labelfor_remark1}">
+                            {BEGIN remark1_label}
+                              {$label cdd_measures remark1}
+                            {END remark1_label}
+                          </label>
+                          <DIV class="r-edit-field">
+                            {$remark1_editcontrol}
+                          </div>
+                          <DIV class="r-edit-tooltip" data-helpfor="remark1">
+                            <DIV class="text-muted">
+                              {$tooltip cdd_measures remark1}
+                            </div>
+                          </div>
+                        </div>
+                      {END remark1_fieldblock}
+                  </td>
+                {END cellblock_grid_c15}
+              </tr>
+              <tr {$row_grid_2} >
+                {BEGIN cellblock_grid_c14}
+                  <TD {$cell_grid_c14} class="r-ori-vert" data-fullwidth data-cellId="grid_c14" data-pageid="{$pageid}" data-page="cdd_measures_add" data-v-cell="4">
+                    <DIV edit-form-cell class="clearfix">
+                      {BEGIN measure2_fieldblock}
+                        <DIV class="r-edit-label" data-signal-error-for="measure2{$id}" data-itemtype="edit_field_label" data-itemid="edit_field_label1" {$item_edit_field_label1} data-pageid="{$pageid}" data-field="measure2" data-fieldname="measure2" data-before-same-field>
+                          <LABEL class="r-edit-label control-label" for="{$labelfor_measure2}">
+                            {BEGIN measure2_label}
+                              {$label cdd_measures measure2}
+                            {END measure2_label}
+                          </label>
+                        </div>
+                      {END measure2_fieldblock}
+                      <span data-itemtype="text" data-itemid="text3" {$item_text3} data-pageid="{$pageid}" data-page="cdd_measures_add" data-small >
+                        If your answer is “Yes” to the above question, please indicate the particulars of the BO in the “Remarks” column.
+                      </span>
+                      {BEGIN measure2_fieldblock}
+                        <DIV class="r-edit-field" data-signal-error-for="measure2{$id}" data-itemtype="edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="measure2" data-fieldname="measure2">
+                          {$measure2_editcontrol}
+                        </div>
+                      {END measure2_fieldblock}
+                      {BEGIN remark2_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_remark2} r-vertical-field" data-signal-error-for="remark2{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field11" {$item_integrated_edit_field11} data-pageid="{$pageid}" data-field="remark2" data-fieldname="remark2">
+                          <LABEL class="r-edit-label control-label" for="{$labelfor_remark2}">
+                            {BEGIN remark2_label}
+                              {$label cdd_measures remark2}
+                            {END remark2_label}
+                          </label>
+                          <DIV class="r-edit-field">
+                            {$remark2_editcontrol}
+                          </div>
+                          <DIV class="r-edit-tooltip" data-helpfor="remark2">
+                            <DIV class="text-muted">
+                              {$tooltip cdd_measures remark2}
+                            </div>
+                          </div>
+                        </div>
+                      {END remark2_fieldblock}
+                  </td>
+                {END cellblock_grid_c14}
+              </tr>
+              <tr {$row_grid_3} >
+                {BEGIN cellblock_grid_c17}
+                  <TD {$cell_grid_c17} class="r-ori-vert" data-fullwidth data-cellId="grid_c17" data-pageid="{$pageid}" data-page="cdd_measures_add" data-v-cell="4">
+                    <DIV edit-form-cell class="clearfix">
+                      <span data-itemtype="text" data-itemid="text4" {$item_text4} data-pageid="{$pageid}" data-page="cdd_measures_add" data-small >
+                        2 United Nations (UN) Sanction Lists
+                      </span>
+                      {BEGIN measure3_fieldblock}
+                        <DIV class="r-edit-label" data-signal-error-for="measure3{$id}" data-itemtype="edit_field_label" data-itemid="edit_field_label2" {$item_edit_field_label2} data-pageid="{$pageid}" data-field="measure3" data-fieldname="measure3" data-before-same-field>
+                          <LABEL class="r-edit-label control-label" for="{$labelfor_measure3}">
+                            {BEGIN measure3_label}
+                              {$label cdd_measures measure3}
+                            {END measure3_label}
+                          </label>
+                        </div>
+                      {END measure3_fieldblock}
+                      <span data-itemtype="text" data-itemid="text5" {$item_text5} data-pageid="{$pageid}" data-page="cdd_measures_add" data-small >
+                        * If there is a partial name match, salesperson should find out whether the nationality and age range of the client match the information provided in the UN Sanction Lists. If there is a nationality and age range match, answer “Yes” to this question.
+                      </span>
+                      <span data-itemtype="text" data-itemid="text6" {$item_text6} data-pageid="{$pageid}" data-page="cdd_measures_add" data-small >
+                        If your answer is “Yes” to the above question, please proceed to lodge an STR.
+                      </span>
+                      {BEGIN measure3_fieldblock}
+                        <DIV class="r-edit-field" data-signal-error-for="measure3{$id}" data-itemtype="edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="measure3" data-fieldname="measure3">
+                          {$measure3_editcontrol}
+                        </div>
+                      {END measure3_fieldblock}
+                      {BEGIN remark3_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_remark3} r-vertical-field" data-signal-error-for="remark3{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field12" {$item_integrated_edit_field12} data-pageid="{$pageid}" data-field="remark3" data-fieldname="remark3">
+                          <LABEL class="r-edit-label control-label" for="{$labelfor_remark3}">
+                            {BEGIN remark3_label}
+                              {$label cdd_measures remark3}
+                            {END remark3_label}
+                          </label>
+                          <DIV class="r-edit-field">
+                            {$remark3_editcontrol}
+                          </div>
+                          <DIV class="r-edit-tooltip" data-helpfor="remark3">
+                            <DIV class="text-muted">
+                              {$tooltip cdd_measures remark3}
+                            </div>
+                          </div>
+                        </div>
+                      {END remark3_fieldblock}
+                  </td>
+                {END cellblock_grid_c17}
+              </tr>
+              <tr {$row_grid_4} >
+                {BEGIN cellblock_grid_c12}
+                  <TD {$cell_grid_c12} class="r-ori-vert" data-fullwidth data-cellId="grid_c12" data-pageid="{$pageid}" data-page="cdd_measures_add" data-v-cell="4">
+                    <DIV edit-form-cell class="clearfix">
+                      {BEGIN measure4_fieldblock}
+                        <DIV class="r-edit-label" data-signal-error-for="measure4{$id}" data-itemtype="edit_field_label" data-itemid="edit_field_label3" {$item_edit_field_label3} data-pageid="{$pageid}" data-field="measure4" data-fieldname="measure4" data-before-same-field>
+                          <LABEL class="r-edit-label control-label" for="{$labelfor_measure4}">
+                            {BEGIN measure4_label}
+                              {$label cdd_measures measure4}
+                            {END measure4_label}
+                          </label>
+                        </div>
+                      {END measure4_fieldblock}
+                      <span data-itemtype="text" data-itemid="text7" {$item_text7} data-pageid="{$pageid}" data-page="cdd_measures_add" data-small >
+                        If your answer is “Yes” to the above question, please proceed to lodge an STR and cease dealing with the Client or BO.
+                      </span>
+                      {BEGIN measure4_fieldblock}
+                        <DIV class="r-edit-field" data-signal-error-for="measure4{$id}" data-itemtype="edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="measure4" data-fieldname="measure4">
+                          {$measure4_editcontrol}
+                        </div>
+                      {END measure4_fieldblock}
+                      {BEGIN remark4_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_remark4} r-vertical-field" data-signal-error-for="remark4{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field13" {$item_integrated_edit_field13} data-pageid="{$pageid}" data-field="remark4" data-fieldname="remark4">
+                          <LABEL class="r-edit-label control-label" for="{$labelfor_remark4}">
+                            {BEGIN remark4_label}
+                              {$label cdd_measures remark4}
+                            {END remark4_label}
+                          </label>
+                          <DIV class="r-edit-field">
+                            {$remark4_editcontrol}
+                          </div>
+                          <DIV class="r-edit-tooltip" data-helpfor="remark4">
+                            <DIV class="text-muted">
+                              {$tooltip cdd_measures remark4}
+                            </div>
+                          </div>
+                        </div>
+                      {END remark4_fieldblock}
+                  </td>
+                {END cellblock_grid_c12}
+              </tr>
+              <tr {$row_grid_5} >
+                {BEGIN cellblock_grid_c11}
+                  <TD {$cell_grid_c11} class="r-ori-vert" data-fullwidth data-cellId="grid_c11" data-pageid="{$pageid}" data-page="cdd_measures_add" data-v-cell="4">
+                    <DIV edit-form-cell class="clearfix">
+                      <span data-itemtype="text" data-itemid="text8" {$item_text8} data-pageid="{$pageid}" data-page="cdd_measures_add" data-small >
+                        3 Panama Papers
+                      </span>
+                      {BEGIN measure5_fieldblock}
+                        <DIV class="r-edit-label" data-signal-error-for="measure5{$id}" data-itemtype="edit_field_label" data-itemid="edit_field_label4" {$item_edit_field_label4} data-pageid="{$pageid}" data-field="measure5" data-fieldname="measure5" data-before-same-field>
+                          <LABEL class="r-edit-label control-label" for="{$labelfor_measure5}">
+                            {BEGIN measure5_label}
+                              {$label cdd_measures measure5}
+                            {END measure5_label}
+                          </label>
+                        </div>
+                      {END measure5_fieldblock}
+                      {BEGIN measure5_fieldblock}
+                        <DIV class="r-edit-field" data-signal-error-for="measure5{$id}" data-itemtype="edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="measure5" data-fieldname="measure5">
+                          {$measure5_editcontrol}
+                        </div>
+                      {END measure5_fieldblock}
+                      {BEGIN remark5_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_remark5} r-vertical-field" data-signal-error-for="remark5{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field14" {$item_integrated_edit_field14} data-pageid="{$pageid}" data-field="remark5" data-fieldname="remark5">
+                          <LABEL class="r-edit-label control-label" for="{$labelfor_remark5}">
+                            {BEGIN remark5_label}
+                              {$label cdd_measures remark5}
+                            {END remark5_label}
+                          </label>
+                          <DIV class="r-edit-field">
+                            {$remark5_editcontrol}
+                          </div>
+                          <DIV class="r-edit-tooltip" data-helpfor="remark5">
+                            <DIV class="text-muted">
+                              {$tooltip cdd_measures remark5}
+                            </div>
+                          </div>
+                        </div>
+                      {END remark5_fieldblock}
+                  </td>
+                {END cellblock_grid_c11}
+              </tr>
+              <tr {$row_grid_6} >
+                {BEGIN cellblock_grid_c10}
+                  <TD {$cell_grid_c10} class="r-ori-vert" data-fullwidth data-cellId="grid_c10" data-pageid="{$pageid}" data-page="cdd_measures_add" data-v-cell="4">
+                    <DIV edit-form-cell class="clearfix">
+                      {BEGIN measure6_fieldblock}
+                        <DIV class="r-edit-label" data-signal-error-for="measure6{$id}" data-itemtype="edit_field_label" data-itemid="edit_field_label5" {$item_edit_field_label5} data-pageid="{$pageid}" data-field="measure6" data-fieldname="measure6" data-before-same-field>
+                          <LABEL class="r-edit-label control-label" for="{$labelfor_measure6}">
+                            {BEGIN measure6_label}
+                              {$label cdd_measures measure6}
+                            {END measure6_label}
+                          </label>
+                        </div>
+                      {END measure6_fieldblock}
+                      <span data-itemtype="text" data-itemid="text9" {$item_text9} data-pageid="{$pageid}" data-page="cdd_measures_add" data-small >
+                        If your answer is “Yes” to the above question, please review your client’s activities for criminal conduct and lodge an STR where warranted. Refer to GC 04-16 for guidance on submission of STRs related to the Panama Papers.
+                      </span>
+                      {BEGIN measure6_fieldblock}
+                        <DIV class="r-edit-field" data-signal-error-for="measure6{$id}" data-itemtype="edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="measure6" data-fieldname="measure6">
+                          {$measure6_editcontrol}
+                        </div>
+                      {END measure6_fieldblock}
+                      {BEGIN remark6_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_remark6} r-vertical-field" data-signal-error-for="remark6{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field15" {$item_integrated_edit_field15} data-pageid="{$pageid}" data-field="remark6" data-fieldname="remark6">
+                          <LABEL class="r-edit-label control-label" for="{$labelfor_remark6}">
+                            {BEGIN remark6_label}
+                              {$label cdd_measures remark6}
+                            {END remark6_label}
+                          </label>
+                          <DIV class="r-edit-field">
+                            {$remark6_editcontrol}
+                          </div>
+                          <DIV class="r-edit-tooltip" data-helpfor="remark6">
+                            <DIV class="text-muted">
+                              {$tooltip cdd_measures remark6}
+                            </div>
+                          </div>
+                        </div>
+                      {END remark6_fieldblock}
+                  </td>
+                {END cellblock_grid_c10}
+              </tr>
+              <tr {$row_grid_7} >
+                {BEGIN cellblock_grid_c9}
+                  <TD {$cell_grid_c9} class="r-ori-vert" data-fullwidth data-cellId="grid_c9" data-pageid="{$pageid}" data-page="cdd_measures_add" data-v-cell="4">
+                    <DIV edit-form-cell class="clearfix">
+                      <span data-itemtype="text" data-itemid="text10" {$item_text10} data-pageid="{$pageid}" data-page="cdd_measures_add" data-small >
+                        4 Politically Exposed Person (PEP)
+                      </span>
+                      {BEGIN measure7_fieldblock}
+                        <DIV class="r-edit-label" data-signal-error-for="measure7{$id}" data-itemtype="edit_field_label" data-itemid="edit_field_label6" {$item_edit_field_label6} data-pageid="{$pageid}" data-field="measure7" data-fieldname="measure7" data-before-same-field>
+                          <LABEL class="r-edit-label control-label" for="{$labelfor_measure7}">
+                            {BEGIN measure7_label}
+                              {$label cdd_measures measure7}
+                            {END measure7_label}
+                          </label>
+                        </div>
+                      {END measure7_fieldblock}
+                      <span data-itemtype="text" data-itemid="text11" {$item_text11} data-pageid="{$pageid}" data-page="cdd_measures_add" data-small >
+                        * PEP refers to a person, whether domestic, foreign or international organisation, who is or has been entrusted with prominent public functions, e.g. government ministers, senior civil servants, senior executive of state owned corporations or senior management of international organisations, etc. Use an internet-based search engine, e.g. Google and Yahoo, to obtain news or information if you suspect the client or BO is a PEP.
+                      </span>
+                      <span data-itemtype="text" data-itemid="text12" {$item_text12} data-pageid="{$pageid}" data-page="cdd_measures_add" data-small >
+                        If your answer is “No” to the above question, please select “NA” for the following question.
+                      </span>
+                      {BEGIN measure7_fieldblock}
+                        <DIV class="r-edit-field" data-signal-error-for="measure7{$id}" data-itemtype="edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="measure7" data-fieldname="measure7">
+                          {$measure7_editcontrol}
+                        </div>
+                      {END measure7_fieldblock}
+                      {BEGIN remark7_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_remark7} r-vertical-field" data-signal-error-for="remark7{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field16" {$item_integrated_edit_field16} data-pageid="{$pageid}" data-field="remark7" data-fieldname="remark7">
+                          <LABEL class="r-edit-label control-label" for="{$labelfor_remark7}">
+                            {BEGIN remark7_label}
+                              {$label cdd_measures remark7}
+                            {END remark7_label}
+                          </label>
+                          <DIV class="r-edit-field">
+                            {$remark7_editcontrol}
+                          </div>
+                          <DIV class="r-edit-tooltip" data-helpfor="remark7">
+                            <DIV class="text-muted">
+                              {$tooltip cdd_measures remark7}
+                            </div>
+                          </div>
+                        </div>
+                      {END remark7_fieldblock}
+                  </td>
+                {END cellblock_grid_c9}
+              </tr>
+              <tr {$row_grid_8} >
+                {BEGIN cellblock_grid_c8}
+                  <TD {$cell_grid_c8} class="r-ori-vert" data-fullwidth data-cellId="grid_c8" data-pageid="{$pageid}" data-page="cdd_measures_add" data-v-cell="4">
+                    <DIV edit-form-cell class="clearfix">
+                      {BEGIN measure8_fieldblock}
+                        <DIV class="r-edit-label" data-signal-error-for="measure8{$id}" data-itemtype="edit_field_label" data-itemid="edit_field_label7" {$item_edit_field_label7} data-pageid="{$pageid}" data-field="measure8" data-fieldname="measure8" data-before-same-field>
+                          <LABEL class="r-edit-label control-label" for="{$labelfor_measure8}">
+                            {BEGIN measure8_label}
+                              {$label cdd_measures measure8}
+                            {END measure8_label}
+                          </label>
+                        </div>
+                      {END measure8_fieldblock}
+                      <span data-itemtype="text" data-itemid="text13" {$item_text13} data-pageid="{$pageid}" data-page="cdd_measures_add" data-small >
+                        * A foreign PEP refers to a person who is or has been entrusted with prominent public functions by a foreign country. Family member means a parent, step-parent, child, step-child, adopted child, spouse, sibling, step-sibling and adopted sibling of the PEP. Close associate means an individual who is closely connected to a PEP, either socially or professionally.
+                      </span>
+                      <span data-itemtype="text" data-itemid="text14" {$item_text14} data-pageid="{$pageid}" data-page="cdd_measures_add" data-small >
+                        If your answer is “Yes” to the above question, ask for the source of the PEP’s funds/wealth and to seek approval from your estate agent whether to continue with the property transaction. Indicate the source of funds/wealth and the decision of your estate agent in the “Remarks” column.
+                      </span>
+                      {BEGIN measure8_fieldblock}
+                        <DIV class="r-edit-field" data-signal-error-for="measure8{$id}" data-itemtype="edit_field" data-itemid="integrated_edit_field8" {$item_integrated_edit_field8} data-pageid="{$pageid}" data-field="measure8" data-fieldname="measure8">
+                          {$measure8_editcontrol}
+                        </div>
+                      {END measure8_fieldblock}
+                      {BEGIN remark8_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_remark8} r-vertical-field" data-signal-error-for="remark8{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field17" {$item_integrated_edit_field17} data-pageid="{$pageid}" data-field="remark8" data-fieldname="remark8">
+                          <LABEL class="r-edit-label control-label" for="{$labelfor_remark8}">
+                            {BEGIN remark8_label}
+                              {$label cdd_measures remark8}
+                            {END remark8_label}
+                          </label>
+                          <DIV class="r-edit-field">
+                            {$remark8_editcontrol}
+                          </div>
+                          <DIV class="r-edit-tooltip" data-helpfor="remark8">
+                            <DIV class="text-muted">
+                              {$tooltip cdd_measures remark8}
+                            </div>
+                          </div>
+                        </div>
+                      {END remark8_fieldblock}
+                  </td>
+                {END cellblock_grid_c8}
+              </tr>
+              <tr {$row_grid_9} >
+                {BEGIN cellblock_grid_c7}
+                  <TD {$cell_grid_c7} class="r-ori-vert" data-fullwidth data-cellId="grid_c7" data-pageid="{$pageid}" data-page="cdd_measures_add" data-v-cell="4">
+                    <DIV edit-form-cell class="clearfix">
+                      <span data-itemtype="text" data-itemid="text15" {$item_text15} data-pageid="{$pageid}" data-page="cdd_measures_add" data-small >
+                        5 Higher Risk Areas
+                      </span>
+                      {BEGIN measure9_fieldblock}
+                        <DIV class="r-edit-label" data-signal-error-for="measure9{$id}" data-itemtype="edit_field_label" data-itemid="edit_field_label8" {$item_edit_field_label8} data-pageid="{$pageid}" data-field="measure9" data-fieldname="measure9" data-before-same-field>
+                          <LABEL class="r-edit-label control-label" for="{$labelfor_measure9}">
+                            {BEGIN measure9_label}
+                              {$label cdd_measures measure9}
+                            {END measure9_label}
+                          </label>
+                        </div>
+                      {END measure9_fieldblock}
+                      <span data-itemtype="text" data-itemid="text16" {$item_text16} data-pageid="{$pageid}" data-page="cdd_measures_add" data-small >
+                        * Complex transactions could include attempts to disguise the BO involved in the transaction, or unnecessarily complex transaction structure possibly designed to obscure the true nature of the transaction, or multiple intermediaries used for the transaction. Unusually large transactions could include transaction priced at more than the usual or expected amount for a similar typical transaction.
+                      </span>
+                      {BEGIN measure9_fieldblock}
+                        <DIV class="r-edit-field" data-signal-error-for="measure9{$id}" data-itemtype="edit_field" data-itemid="integrated_edit_field9" {$item_integrated_edit_field9} data-pageid="{$pageid}" data-field="measure9" data-fieldname="measure9">
+                          {$measure9_editcontrol}
+                        </div>
+                      {END measure9_fieldblock}
+                      {BEGIN remark9_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_remark9} r-vertical-field" data-signal-error-for="remark9{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field18" {$item_integrated_edit_field18} data-pageid="{$pageid}" data-field="remark9" data-fieldname="remark9">
+                          <LABEL class="r-edit-label control-label" for="{$labelfor_remark9}">
+                            {BEGIN remark9_label}
+                              {$label cdd_measures remark9}
+                            {END remark9_label}
+                          </label>
+                          <DIV class="r-edit-field">
+                            {$remark9_editcontrol}
+                          </div>
+                          <DIV class="r-edit-tooltip" data-helpfor="remark9">
+                            <DIV class="text-muted">
+                              {$tooltip cdd_measures remark9}
+                            </div>
+                          </div>
+                        </div>
+                      {END remark9_fieldblock}
+                  </td>
+                {END cellblock_grid_c7}
+              </tr>
+              <tr {$row_grid_10} >
+                {BEGIN cellblock_grid_c6}
+                  <TD {$cell_grid_c6} class="r-ori-vert" data-fullwidth data-cellId="grid_c6" data-pageid="{$pageid}" data-page="cdd_measures_add" data-v-cell="4">
+                    <DIV edit-form-cell class="clearfix">
+                      {BEGIN measure10_fieldblock}
+                        <DIV class="r-edit-label" data-signal-error-for="measure10{$id}" data-itemtype="edit_field_label" data-itemid="edit_field_label9" {$item_edit_field_label9} data-pageid="{$pageid}" data-field="measure10" data-fieldname="measure10" data-before-same-field>
+                          <LABEL class="r-edit-label control-label" for="{$labelfor_measure10}">
+                            {BEGIN measure10_label}
+                              {$label cdd_measures measure10}
+                            {END measure10_label}
+                          </label>
+                        </div>
+                      {END measure10_fieldblock}
+                      <span data-itemtype="text" data-itemid="text17" {$item_text17} data-pageid="{$pageid}" data-page="cdd_measures_add" data-small >
+                        * Transactions with no apparent economic or lawful purpose could include using trust and company service providers to set up a number of corporate structures in multiple countries for the transaction without any apparent purpose.
+                      </span>
+                      {BEGIN measure10_fieldblock}
+                        <DIV class="r-edit-field" data-signal-error-for="measure10{$id}" data-itemtype="edit_field" data-itemid="integrated_edit_field20" {$item_integrated_edit_field20} data-pageid="{$pageid}" data-field="measure10" data-fieldname="measure10">
+                          {$measure10_editcontrol}
+                        </div>
+                      {END measure10_fieldblock}
+                      {BEGIN remark10_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_remark10} r-vertical-field" data-signal-error-for="remark10{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field24" {$item_integrated_edit_field24} data-pageid="{$pageid}" data-field="remark10" data-fieldname="remark10">
+                          <LABEL class="r-edit-label control-label" for="{$labelfor_remark10}">
+                            {BEGIN remark10_label}
+                              {$label cdd_measures remark10}
+                            {END remark10_label}
+                          </label>
+                          <DIV class="r-edit-field">
+                            {$remark10_editcontrol}
+                          </div>
+                          <DIV class="r-edit-tooltip" data-helpfor="remark10">
+                            <DIV class="text-muted">
+                              {$tooltip cdd_measures remark10}
+                            </div>
+                          </div>
+                        </div>
+                      {END remark10_fieldblock}
+                  </td>
+                {END cellblock_grid_c6}
+              </tr>
+              <tr {$row_grid_11} >
+                {BEGIN cellblock_grid_c5}
+                  <TD {$cell_grid_c5} class="r-ori-vert" data-fullwidth data-cellId="grid_c5" data-pageid="{$pageid}" data-page="cdd_measures_add" data-v-cell="4">
+                    <DIV edit-form-cell class="clearfix">
+                      {BEGIN measure11_fieldblock}
+                        <DIV class="r-edit-label" data-signal-error-for="measure11{$id}" data-itemtype="edit_field_label" data-itemid="edit_field_label10" {$item_edit_field_label10} data-pageid="{$pageid}" data-field="measure11" data-fieldname="measure11" data-before-same-field>
+                          <LABEL class="r-edit-label control-label" for="{$labelfor_measure11}">
+                            {BEGIN measure11_label}
+                              {$label cdd_measures measure11}
+                            {END measure11_label}
+                          </label>
+                        </div>
+                      {END measure11_fieldblock}
+                      <span data-itemtype="text" data-itemid="text18" {$item_text18} data-pageid="{$pageid}" data-page="cdd_measures_add" data-small >
+                        * The links to the list of higher risk countries can be found at the Financial Action Task Force’s (FATF) webpage
+                        <A href="http://www.fatf-gafi.org/publications/high-riskandnon-cooperativejurisdictions/?hf=10&amp;b=0&amp;s=desc(fatf_releasedate)" target="_blank">
+                          here
+                        </a>
+                      </span>
+                      <span data-itemtype="text" data-itemid="text19" {$item_text19} data-pageid="{$pageid}" data-page="cdd_measures_add" data-small >
+                        If your answer is “Yes” to one or more of the above questions 5, please proceed to complete question 6. If your answers are “No” to all of the above questions 5, please select “NA” for the questions in 6 below.
+                      </span>
+                      {BEGIN measure11_fieldblock}
+                        <DIV class="r-edit-field" data-signal-error-for="measure11{$id}" data-itemtype="edit_field" data-itemid="integrated_edit_field21" {$item_integrated_edit_field21} data-pageid="{$pageid}" data-field="measure11" data-fieldname="measure11">
+                          {$measure11_editcontrol}
+                        </div>
+                      {END measure11_fieldblock}
+                      {BEGIN remark11_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_remark11} r-vertical-field" data-signal-error-for="remark11{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field25" {$item_integrated_edit_field25} data-pageid="{$pageid}" data-field="remark11" data-fieldname="remark11">
+                          <LABEL class="r-edit-label control-label" for="{$labelfor_remark11}">
+                            {BEGIN remark11_label}
+                              {$label cdd_measures remark11}
+                            {END remark11_label}
+                          </label>
+                          <DIV class="r-edit-field">
+                            {$remark11_editcontrol}
+                          </div>
+                          <DIV class="r-edit-tooltip" data-helpfor="remark11">
+                            <DIV class="text-muted">
+                              {$tooltip cdd_measures remark11}
+                            </div>
+                          </div>
+                        </div>
+                      {END remark11_fieldblock}
+                  </td>
+                {END cellblock_grid_c5}
+              </tr>
+              <tr {$row_grid_12} >
+                {BEGIN cellblock_grid_c4}
+                  <TD {$cell_grid_c4} class="r-ori-vert" data-fullwidth data-cellId="grid_c4" data-pageid="{$pageid}" data-page="cdd_measures_add" data-v-cell="4">
+                    <DIV edit-form-cell class="clearfix">
+                      <span data-itemtype="text" data-itemid="text20" {$item_text20} data-pageid="{$pageid}" data-page="cdd_measures_add" data-small >
+                        6 Enhanced CDD
+                      </span>
+                      {BEGIN measure12_fieldblock}
+                        <DIV class="r-edit-label" data-signal-error-for="measure12{$id}" data-itemtype="edit_field_label" data-itemid="edit_field_label11" {$item_edit_field_label11} data-pageid="{$pageid}" data-field="measure12" data-fieldname="measure12" data-before-same-field>
+                          <LABEL class="r-edit-label control-label" for="{$labelfor_measure12}">
+                            {BEGIN measure12_label}
+                              {$label cdd_measures measure12}
+                            {END measure12_label}
+                          </label>
+                        </div>
+                      {END measure12_fieldblock}
+                      <span data-itemtype="text" data-itemid="text21" {$item_text21} data-pageid="{$pageid}" data-page="cdd_measures_add" data-small >
+                        If your answer is “Yes” to the above question, please indicate the findings in the “Remarks” column.
+                      </span>
+                      {BEGIN measure12_fieldblock}
+                        <DIV class="r-edit-field" data-signal-error-for="measure12{$id}" data-itemtype="edit_field" data-itemid="integrated_edit_field22" {$item_integrated_edit_field22} data-pageid="{$pageid}" data-field="measure12" data-fieldname="measure12">
+                          {$measure12_editcontrol}
+                        </div>
+                      {END measure12_fieldblock}
+                      {BEGIN remark12_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_remark12} r-vertical-field" data-signal-error-for="remark12{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field26" {$item_integrated_edit_field26} data-pageid="{$pageid}" data-field="remark12" data-fieldname="remark12">
+                          <LABEL class="r-edit-label control-label" for="{$labelfor_remark12}">
+                            {BEGIN remark12_label}
+                              {$label cdd_measures remark12}
+                            {END remark12_label}
+                          </label>
+                          <DIV class="r-edit-field">
+                            {$remark12_editcontrol}
+                          </div>
+                          <DIV class="r-edit-tooltip" data-helpfor="remark12">
+                            <DIV class="text-muted">
+                              {$tooltip cdd_measures remark12}
+                            </div>
+                          </div>
+                        </div>
+                      {END remark12_fieldblock}
+                  </td>
+                {END cellblock_grid_c4}
+              </tr>
+              <tr {$row_grid_13} >
+                {BEGIN cellblock_grid_c}
+                  <TD {$cell_grid_c} class="r-ori-vert" data-fullwidth data-cellId="grid_c" data-pageid="{$pageid}" data-page="cdd_measures_add" data-v-cell="4">
+                    <DIV edit-form-cell class="clearfix">
+                      {BEGIN measure13_fieldblock}
+                        <DIV class="r-edit-label" data-signal-error-for="measure13{$id}" data-itemtype="edit_field_label" data-itemid="edit_field_label12" {$item_edit_field_label12} data-pageid="{$pageid}" data-field="measure13" data-fieldname="measure13" data-before-same-field>
+                          <LABEL class="r-edit-label control-label" for="{$labelfor_measure13}">
+                            {BEGIN measure13_label}
+                              {$label cdd_measures measure13}
+                            {END measure13_label}
+                          </label>
+                        </div>
+                      {END measure13_fieldblock}
+                      <span data-itemtype="text" data-itemid="text22" {$item_text22} data-pageid="{$pageid}" data-page="cdd_measures_add" data-small >
+                        If your answer is “Yes” to the above question, please indicate the decision of your estate agent in the “Remarks” column.
+                      </span>
+                      {BEGIN measure13_fieldblock}
+                        <DIV class="r-edit-field" data-signal-error-for="measure13{$id}" data-itemtype="edit_field" data-itemid="integrated_edit_field23" {$item_integrated_edit_field23} data-pageid="{$pageid}" data-field="measure13" data-fieldname="measure13">
+                          {$measure13_editcontrol}
+                        </div>
+                      {END measure13_fieldblock}
+                      {BEGIN remark13_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_remark13} r-vertical-field" data-signal-error-for="remark13{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field27" {$item_integrated_edit_field27} data-pageid="{$pageid}" data-field="remark13" data-fieldname="remark13">
+                          <LABEL class="r-edit-label control-label" for="{$labelfor_remark13}">
+                            {BEGIN remark13_label}
+                              {$label cdd_measures remark13}
+                            {END remark13_label}
+                          </label>
+                          <DIV class="r-edit-field">
+                            {$remark13_editcontrol}
+                          </div>
+                          <DIV class="r-edit-tooltip" data-helpfor="remark13">
+                            <DIV class="text-muted">
+                              {$tooltip cdd_measures remark13}
+                            </div>
+                          </div>
+                        </div>
+                      {END remark13_fieldblock}
+                  </td>
+                {END cellblock_grid_c}
+              </tr>
+            </tbody>
+          </table>
+        {END grid_block}
+        {BEGIN below-grid_block}
+          <DIV class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}">
+            <DIV class="row">
+              <DIV data-cellId="below-grid_c1" data-pageid="{$pageid}" {$cell_below-grid_c1} class="col-md-12">
+                <span data-itemtype="add_save" data-itemid="add_save" {$item_add_save} data-pageid="{$pageid}" data-small data-button-item>
+                  <A type="button" title class="btn btn-primary" {$savebutton_attrs}>
+                    Save
+                  </a>
+                </span>
+                <span data-itemtype="add_reset" data-itemid="add_reset" {$item_add_reset} data-pageid="{$pageid}" data-small data-button-item>
+                  <A type="button" title class="btn btn-default" id="resetButton{$id}">
+                    Reset
+                  </a>
+                </span>
+                {BEGIN back_button}
+                  <span data-itemtype="add_back_list" data-itemid="add_back_list" {$item_add_back_list} data-pageid="{$pageid}" data-small data-button-item>
+                    <A type="button" title class="btn btn-default" id="backButton{$id}">
+                      Back to list
+                    </a>
+                  </span>
+                {END back_button}
+                {BEGIN cancel_button}
+                  <span data-itemtype="add_cancel" data-itemid="add_cancel" {$item_add_cancel} data-pageid="{$pageid}" data-small data-button-item>
+                    <A type="button" title class="btn btn-default" id="cancelButton{$id}">
+                      Cancel
+                    </a>
+                  </span>
+                {END cancel_button}
+              </div>
+            </div>
+          </div>
+        {END below-grid_block}
+      </div>
+      {$footer}
+    {END body}
+  </body>
+</html>

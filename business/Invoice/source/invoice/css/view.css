@@ -1,0 +1,55 @@
+tr.item-row td{
+	padding-top: 7px;
+	padding-bottom: 7px;
+}
+
+div.items-text{
+	width: 500px;	
+	padding-top: 7px;
+}
+
+#company-name{
+	padding-top:10px;
+}
+
+#totals {
+    margin-top: 60px;
+}
+
+.page-Invoiceemail_add .rnr-toprow, .rnr-pagewrapper .rnr-bottomrow {
+ height: 1px !important;
+ font-size: 1px;
+ inline-height: 0;
+}
+
+.rnr-pagewrapper .rnr-bottomrow td{
+   margin: 0;
+   padding: 0;
+}
+
+
+.rnr-pagewrapper div, .rnr-pagewrapper textarea {
+	line-height: normal;
+}
+
+.mail-buttons {
+ text-align: center;
+	margin-top: 10px;
+}
+
+[id^='value_link']{
+	font-size: 14px;
+}
+
+ textarea[id^='value_link']:hover,  textarea[id^='value_link']:focus{
+	background-color:#FFFFFF;
+}
+
+
+div#customer{
+ margin-bottom:40px;
+}
+
+.item-row{
+	cursor: auto;
+}
